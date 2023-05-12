@@ -1,0 +1,48 @@
+/* common */
+
+html{
+  font-size: 100%;
+}
+
+body{
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  line-height: 1.7;
+  color: #432;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover{
+  opacity: 0.7;
+}
+
+img{
+  max-width: 100%;
+}
+
+li{
+  list-style-type: none;
+}
+
+.container{
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* hedder */
+
+.page-header {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: antiquewhite;
+}
+
+.page-header ul{
+  display: flex;
+  justify-content: space-around;
+  
+}
