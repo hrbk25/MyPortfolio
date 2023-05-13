@@ -1,0 +1,33 @@
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+}
+
+.page-header {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(240, 245, 249, 0.7);
+  font-size: 20px;
+}
+.page-header ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-img {
+  position: relative;
+  z-index: 10;
+}
+.main-img .title {
+  font-size: 70px;
+  position: absolute;
+  text-align: center;
+  padding: 5px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #52616B;
+  font-weight: bold;
+  letter-spacing: 6px;
+}/*# sourceMappingURL=style.css.map */

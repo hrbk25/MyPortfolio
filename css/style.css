@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* common */
 
 html{
@@ -13,6 +15,7 @@ body{
 a{
   text-decoration: none;
   cursor: pointer;
+  color: #52616B;
 }
 
 a:hover{
@@ -31,18 +34,4 @@ li{
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
-}
-
-/* hedder */
-
-.page-header {
-  margin: 0 auto;
-  padding: 20px;
-  background-color: antiquewhite;
-}
-
-.page-header ul{
-  display: flex;
-  justify-content: space-around;
-  
 }
