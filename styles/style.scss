@@ -8,8 +8,8 @@ header{
 
 .page-header {
   margin: 0 auto;
-  padding: 20px;
-  background-color: rgb(240, 245, 249, 0.7);
+  padding: 24px;
+  background-color: rgb(240, 245, 249, 0.5);
   font-size: 20px;
     ul{
       display: flex;
@@ -26,7 +26,9 @@ header{
 .main-img{
   position: relative;
   z-index: 10;
-  .title{
+  #title{
+    display: flex;
+    overflow: hidden;
     font-size: 70px;
     position: absolute;
     text-align: center;
@@ -38,6 +40,23 @@ header{
     font-weight: bold;
     letter-spacing: 6px;
     // background-color: rgb(240, 245, 249, 0.3);
+    span{
+      display: block;
+      transform: translate(0, 105%);
+      transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+      @for $i from 1 through 17 {
+        &:nth-child(#{$i + 1}) {
+          $delay: $i * 0.15 + s;
+          transition-delay: $delay;
+        }
+      }
+    }
+
+  }
+  #title.-visible{
+    span{
+      transform: translate(0, 0);
+    }
   }
 
 }

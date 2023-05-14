@@ -1,10 +1,25 @@
 'use strict';
 
-function dilayTitle() {
-  const title = document.getElementById('title');
-  title.innerHTML  = "Hiro's Portofolio";
-  console.log(title);
-}
+// main-img
 
-setTimeout(dilayTitle, 1000);
+const title = document.getElementById('title');
+
+createTitle();
+
+setInterval(() => {
+  title.classList.add('-visible');
+}, 500);
+
+function createTitle() {
+  const mainTitle = "Hiro's Portofolio";
+
+  let arrayTitle = mainTitle.split('');
+  console.log(arrayTitle);
+    
+  for(let i = 0; i < arrayTitle.length; i++) {
+    let span = document.createElement('span');
+    span.textContent = arrayTitle[i];
+    title.appendChild(span);
+  }
+}
 
