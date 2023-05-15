@@ -3,6 +3,7 @@
 // main-img
 
 const title = document.getElementById('title');
+const homeImg = document.getElementById('home-img');
 
 createTitle();
 
@@ -23,3 +24,28 @@ function createTitle() {
   }
 }
 
+// about 
+// swiper
+
+let mySwiper = new Swiper ('.swiper', {
+  slidesPerView: 1, 
+  spaceBetween: 0, 
+  centeredSlides: true,
+  loop: true,
+  speed: 4000, 
+  autoplay: {
+    delay: 3000,
+  },
+
+  pagination: {
+    el: '.swiper-pagination', 
+    type: 'bullets', 
+    clickable: true, 
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next', 
+    prevEl: '.swiper-button-prev', 
+  },
+
+});

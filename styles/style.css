@@ -91,4 +91,18 @@ header {
 }
 .main-img #title.-visible span {
   transform: translate(0, 0);
+}
+
+#about .about-me .swiper {
+  max-width: 500px;
+}
+#about .about-me .swiper .swiper-wrapper {
+  height: auto;
+}
+#about .about-me .swiper .swiper-wrapper .swiper-slide {
+  height: auto;
+}
+#about .about-me .swiper .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */
