@@ -28,20 +28,25 @@ function createTitle() {
 // swiper
 
 let mySwiper = new Swiper ('.swiper', {
-  slidesPerView: 1, 
-  spaceBetween: 0, 
-  centeredSlides: true,
   loop: true,
-  speed: 4000, 
+  loopAdditionalSlides: 1,
+  centeredSlides: true,
+  centeredSlidesBounds: true,
+  slidesPerView: 2, 
+  spaceBetween: 10, 
+  speed: 2000, 
+  watchSlidesProgress: true,
+  // effect: "fade",
   autoplay: {
     delay: 3000,
+    disableOnInteraction: false,
   },
 
-  pagination: {
-    el: '.swiper-pagination', 
-    type: 'bullets', 
-    clickable: true, 
-  },
+  // pagination: {
+  //   el: '.swiper-pagination', 
+  //   type: 'bullets', 
+  //   clickable: true, 
+  // },
 
   navigation: {
     nextEl: '.swiper-button-next', 

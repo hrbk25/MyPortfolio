@@ -65,16 +65,29 @@ header{
 #about{
   .about-me{
     .swiper {
-      max-width: 500px;
+      max-width: 1000px;
+      overflow: hidden;
       .swiper-wrapper {
         height: auto;
         .swiper-slide {
           height: auto;
+          
           img {
             width: 100%;
             height: 100%;
           }
         }
+      }
+    }
+  }
+}
+
+#about {
+  .swiper-slide {
+    &:not(.swiper-slide-visible) {
+      .slide {
+        pointer-events: none;
+        opacity: .3;
       }
     }
   }
