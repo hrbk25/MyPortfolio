@@ -29,10 +29,10 @@ function createTitle() {
 
 let mySwiper = new Swiper ('.swiper', {
   loop: true,
-  loopAdditionalSlides: 1,
+  loopAdditionalSlides: 2,
   centeredSlides: true,
   centeredSlidesBounds: true,
-  slidesPerView: 2, 
+  slidesPerView: 3, 
   spaceBetween: 10, 
   speed: 2000, 
   watchSlidesProgress: true,
