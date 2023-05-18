@@ -4,15 +4,23 @@
 
 const title = document.getElementById('title');
 const homeImg = document.getElementById('home-img');
+const pageHeader = document.getElementById('page-header');
+
+console.log(homeImg);
 
 createTitle();
 
 setInterval(() => {
   title.classList.add('-visible');
-}, 500);
+}, 300);
+
+setInterval(() => {
+  homeImg.classList.add('-delay');
+  pageHeader.classList.add('-delay');
+}, 1900);
 
 function createTitle() {
-  const mainTitle = "Hiro's Portofolio";
+  const mainTitle = `Hiro's Portofolio`;
 
   let arrayTitle = mainTitle.split('');
   console.log(arrayTitle);
