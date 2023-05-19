@@ -124,8 +124,20 @@ header {
     opacity: 0.6;
   }
 }
+#about {
+  overflow: hidden;
+}
 #about .about-me {
   font-size: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+#about .about-me img {
+  width: 30%;
+}
+#about .about-me .text {
+  width: 60%;
+  margin: auto;
 }
 #about .about-contents {
   margin: 50px 0;

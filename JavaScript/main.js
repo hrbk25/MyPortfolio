@@ -33,7 +33,21 @@ function createTitle() {
 }
 
 // about 
-// swiper
+
+// about scroll display
+
+document.addEventListener("scroll", () => {
+  const sectionTitle = document.querySelector('.section-title');
+  const scroll = document.pageYOffset;
+  if( scroll > 500) {
+    sectionTitle.style.opacity = "1";
+  }else {
+    sectionTitle.style.opacity = '0';
+  }
+})
+
+
+// about swiper
 
 let mySwiper = new Swiper ('.swiper', {
   loop: true,

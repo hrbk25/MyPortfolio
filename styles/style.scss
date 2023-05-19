@@ -96,8 +96,18 @@ header{
 // about
 
 #about{
+  overflow: hidden;
   .about-me{
     font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+    img{
+      width: 30%;
+    }
+    .text{
+      width: 60%;
+      margin: auto;
+    }
   }
   .about-contents{
     margin: 50px 0;
