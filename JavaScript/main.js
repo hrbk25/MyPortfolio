@@ -6,8 +6,6 @@ const title = document.getElementById('title');
 const homeImg = document.getElementById('home-img');
 const pageHeader = document.getElementById('page-header');
 
-console.log(homeImg);
-
 createTitle();
 
 setInterval(() => {
@@ -19,11 +17,9 @@ setInterval(() => {
   pageHeader.classList.add('-delay');
 }, 1900);
 
-function createTitle() {
+function createTitle() { //文字列を１文字ずつ配列に入れて、それをspanに入れて生成。
   const mainTitle = `Hiro's Portofolio`;
-
   let arrayTitle = mainTitle.split('');
-  console.log(arrayTitle);
     
   for(let i = 0; i < arrayTitle.length; i++) {
     let span = document.createElement('span');
@@ -32,20 +28,50 @@ function createTitle() {
   }
 }
 
+
+// 共通section title
+const sectionTitle = document.querySelectorAll('.section-title');
+scrollDisplay(sectionTitle);
+
+
 // about 
 
 // about scroll display
 
-document.addEventListener("scroll", () => {
-  const sectionTitle = document.querySelector('.section-title');
-  const scroll = document.pageYOffset;
-  if( scroll > 500) {
-    sectionTitle.style.opacity = "1";
-  }else {
-    sectionTitle.style.opacity = '0';
-  }
-})
+const myName = document.querySelector('.name');
+const aboutP = document.querySelectorAll('p');
+const more = document.querySelector('.more');
 
+scrollDisplay(myName);
+scrollDisplay(aboutP);
+scrollDisplay(more);
+
+
+function scrollDisplay(el) {
+  if(el.length){ // SelectorAllは数値でtrue、Selectorはundefinedでfalse
+    window.addEventListener("scroll", () => {
+      for (let i = 0; i < el.length; i++){
+        const rect = el[i].getBoundingClientRect().top;
+        const scroll = window.pageYOffset || document.documentElement.scrollTop;
+        const offset = rect + scroll;
+        const windowHeight = window.innerHeight; 
+        if (scroll > offset - windowHeight + 150) {
+          el[i].classList.add('scroll-in');
+        }
+      }
+    });
+  } else {
+    window.addEventListener("scroll", () => {
+      const rect = el.getBoundingClientRect().top;
+      const scroll = window.pageYOffset || document.documentElement.scrollTop;
+      const offset = rect + scroll;
+      const windowHeight = window.innerHeight; 
+      if (scroll > offset - windowHeight + 150) {
+        el.classList.add('scroll-in');
+      }
+  });
+  }
+}
 
 // about swiper
 
@@ -56,19 +82,13 @@ let mySwiper = new Swiper ('.swiper', {
   centeredSlidesBounds: true,
   slidesPerView: 3, 
   spaceBetween: 10, 
-  speed: 2000, 
+  speed: 1500, 
   watchSlidesProgress: true,
   // effect: "fade",
   autoplay: {
-    delay: 3000,
+    delay: 2000,
     disableOnInteraction: false,
   },
-
-  // pagination: {
-  //   el: '.swiper-pagination', 
-  //   type: 'bullets', 
-  //   clickable: true, 
-  // },
 
   navigation: {
     nextEl: '.swiper-button-next', 

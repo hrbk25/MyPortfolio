@@ -36,12 +36,3 @@ li{
   margin: 0 auto;
   text-align: center;
 }
-
-.section-title{
-  font-size: 40px;
-  letter-spacing: 1px;
-  display: inline-block;
-  border-bottom: 5px solid #52616B;
-  margin: 50px 0 0;
-  opacity: 0;
-}
