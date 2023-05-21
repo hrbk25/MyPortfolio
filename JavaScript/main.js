@@ -1,10 +1,10 @@
 'use strict';
 
-// main-img
+// page-header main-img
 
+const pageHeader = document.getElementById('page-header');
 const title = document.getElementById('title');
 const homeImg = document.getElementById('home-img');
-const pageHeader = document.getElementById('page-header');
 
 createTitle();
 
@@ -13,8 +13,8 @@ setInterval(() => {
 }, 300);
 
 setInterval(() => {
-  homeImg.classList.add('-delay');
   pageHeader.classList.add('-delay');
+  homeImg.classList.add('-delay');
 }, 1900);
 
 function createTitle() { //文字列を１文字ずつ配列に入れて、それをspanに入れて生成。
@@ -33,7 +33,6 @@ function createTitle() { //文字列を１文字ずつ配列に入れて、そ�
 const sectionTitle = document.querySelectorAll('.section-title');
 scrollDisplay(sectionTitle);
 
-
 // about 
 
 // about scroll display
@@ -41,10 +40,16 @@ scrollDisplay(sectionTitle);
 const myName = document.querySelector('.name');
 const aboutP = document.querySelectorAll('p');
 const more = document.querySelector('.more');
+const afterMe = document.querySelector('.after-me');
+const skillsTitle = document.querySelectorAll('.skills-title');
+const skillsList = document.querySelectorAll('.skills-list');
 
 scrollDisplay(myName);
 scrollDisplay(aboutP);
 scrollDisplay(more);
+scrollDisplay(afterMe);
+scrollDisplay(skillsTitle);
+scrollDisplay(skillsList);
 
 
 function scrollDisplay(el) {
