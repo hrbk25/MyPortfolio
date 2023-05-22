@@ -128,7 +128,6 @@ header {
   font-size: 40px;
   letter-spacing: 1px;
   display: inline-block;
-  margin: 80px 0 0;
   opacity: 0;
   transition-duration: 1000ms;
   transition-property: opacity, transform;
@@ -370,7 +369,6 @@ header {
   margin: 50px 0 0 20px;
   font-size: 28px;
   text-align: left;
-  width: 10%;
   opacity: 0;
   transition-duration: 1600ms;
   transition-property: opacity, transform;
@@ -419,7 +417,7 @@ header {
   left: 0;
   bottom: 0;
   border-bottom: 2px solid #C9D6DF;
-  animation: border_anim 0.5s linear forwards;
+  animation: border_anim 1.3s linear forwards;
 }
 
 @keyframes fadeInArrow {
