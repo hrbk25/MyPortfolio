@@ -101,3 +101,25 @@ let mySwiper = new Swiper ('.swiper', {
   },
 
 });
+
+
+// scroll ナビ　自動化
+
+const headerHeight = pageHeader.clientHeight; // headerがsection-titleと被らないように。
+
+const scorrllLinks = document.querySelectorAll('a[href^="#"]');
+scorrllLinks.forEach((scorrllLink) => {
+  scorrllLink.addEventListener("click", (e) => {
+    e.preventDefault();  //デフォルトのイベントをキャンセルする。
+    const hrefLink = scorrllLink.getAttribute("href"); //scorrllLinkで取得したaのherf属性を取得
+    const targetContent = document.getElementById(hrefLink.replace("#", ""));//#を無くして、そのidの要素を取得
+    const rectTop = targetContent.getBoundingClientRect().top;
+    const positionY = window.pageYOffset;
+    const target = rectTop + positionY - headerHeight; //header分を引く。
+    console.log();
+    window.scrollTo({
+      top: target,
+      behavior: "smooth",
+    });
+  });
+});
