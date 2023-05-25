@@ -1,6 +1,13 @@
 'use strict';
 
 // loading
+const loading = document.getElementById('loading');
+for(let i = 1; i<=6; i++){
+  const div = document.createElement('div');
+  div.className = 'loading-dot';
+  loading.appendChild(div);
+}
+
 
 window.onload = function() {
   const spinner = document.getElementById('loading');
