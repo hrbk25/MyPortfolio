@@ -1,88 +1,83 @@
 @charset "UTF-8";
+/* ローディングアニメーション */
+.loaded {
+  opacity: 1;
+  visibility: hidden;
+}
+
 #loading {
   width: 100vw;
   height: 100vh;
-  transition: all 1s;
+  transition: all 15s;
   background-color: #C9D6DF;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
 }
-
-/* ローディングアニメーション */
-@keyframes sk-scaleout {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0;
-  }
-}
-.loaded {
-  opacity: 0;
-  visibility: hidden;
-}
-
-#loading {
-  width: 40px;
-  height: 40px;
+#loading #following-dot {
+  width: 100px;
+  height: 100px;
+  margin: 500px auto;
   position: relative;
   animation: sk-chase 2.5s infinite linear both;
 }
-#loading .loading-dot {
+#loading #following-dot .dot {
   width: 100%;
   height: 100%;
-  position: absolute;
   left: 0;
   top: 0;
   animation: sk-chase-dot 2s infinite ease-in-out both;
 }
-#loading .loading-dot:nth-child(1) {
-  transition-delay: -1.1 s;
-}
-#loading .loading-dot:nth-child(1):before {
-  transition-delay: -1.1 s;
-}
-#loading .loading-dot:nth-child(2) {
-  transition-delay: -1 s;
-}
-#loading .loading-dot:nth-child(2):before {
-  transition-delay: -1 s;
-}
-#loading .loading-dot:nth-child(3) {
-  transition-delay: -0.9 s;
-}
-#loading .loading-dot:nth-child(3):before {
-  transition-delay: -0.9 s;
-}
-#loading .loading-dot:nth-child(4) {
-  transition-delay: -0.8 s;
-}
-#loading .loading-dot:nth-child(4):before {
-  transition-delay: -0.8 s;
-}
-#loading .loading-dot:nth-child(5) {
-  transition-delay: -0.7 s;
-}
-#loading .loading-dot:nth-child(5):before {
-  transition-delay: -0.7 s;
-}
-#loading .loading-dot:nth-child(6) {
-  transition-delay: -0.6 s;
-}
-#loading .loading-dot:nth-child(6):before {
-  transition-delay: -0.6 s;
-}
-#loading .loading-dot:before {
+#loading #following-dot .dot:before {
   content: "";
   display: block;
-  width: 25%;
   height: 25%;
   background-color: #fff;
   border-radius: 100%;
   animation: sk-chase-dot-before 2s infinite ease-in-out both;
+}
+#loading #following-dot .dot:nth-child(1) {
+  transition-delay: -1.1 s;
+}
+#loading #following-dot .dot:before {
+  transition-delay: -1.1 s;
+  width: 5%;
+}
+#loading #following-dot .dot:nth-child(2) {
+  transition-delay: -1 s;
+}
+#loading #following-dot .dot:before {
+  transition-delay: -1 s;
+  width: 10%;
+}
+#loading #following-dot .dot:nth-child(3) {
+  transition-delay: -0.9 s;
+}
+#loading #following-dot .dot:before {
+  transition-delay: -0.9 s;
+  width: 15%;
+}
+#loading #following-dot .dot:nth-child(4) {
+  transition-delay: -0.8 s;
+}
+#loading #following-dot .dot:before {
+  transition-delay: -0.8 s;
+  width: 20%;
+}
+#loading #following-dot .dot:nth-child(5) {
+  transition-delay: -0.7 s;
+}
+#loading #following-dot .dot:before {
+  transition-delay: -0.7 s;
+  width: 25%;
+}
+#loading #following-dot .dot:nth-child(6) {
+  transition-delay: -0.6 s;
+}
+#loading #following-dot .dot:before {
+  transition-delay: -0.6 s;
+  width: 30%;
 }
 
 @keyframes sk-chase {

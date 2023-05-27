@@ -1,17 +1,17 @@
 'use strict';
 
 // loading
-const loading = document.getElementById('loading');
+const followingDot = document.getElementById('following-dot');
+// console.log(followingDot);
 for(let i = 1; i<=6; i++){
   const div = document.createElement('div');
-  div.className = 'loading-dot';
-  loading.appendChild(div);
+  div.className = 'dot';
+  followingDot.appendChild(div);
 }
 
-
 window.onload = function() {
-  const spinner = document.getElementById('loading');
-  spinner.classList.add('loaded');
+  const loading = document.getElementById('loading');
+  loading.classList.add('loaded');
 }
 
 
