@@ -107,6 +107,11 @@ header {
   letter-spacing: 6px;
   z-index: 30;
 }
+@media (max-width: 1100px) {
+  .main-img #title {
+    font-size: 50px;
+  }
+}
 .main-img #title span {
   display: block;
   transform: translate(0, 105%);
@@ -191,6 +196,11 @@ header {
   transition-property: opacity, transform;
   transform: translate(-50px, 0);
 }
+@media (max-width: 1100px) {
+  .section-title {
+    font-size: 30px;
+  }
+}
 
 .section-title.scroll-in {
   opacity: 1;
@@ -222,6 +232,11 @@ header {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 1100px) {
+  #about .about-me {
+    font-size: 20px;
+  }
+}
 #about .about-me img {
   width: 40%;
 }
@@ -240,9 +255,19 @@ header {
 #about .about-me .text-box .text .name span {
   font-size: 24px;
 }
+@media (max-width: 1100px) {
+  #about .about-me .text-box .text .name span {
+    font-size: 16px;
+  }
+}
 #about .about-me .text-box .text p {
   font-size: 20px;
   padding: 2px;
+}
+@media (max-width: 1100px) {
+  #about .about-me .text-box .text p {
+    font-size: 14px;
+  }
 }
 #about .about-me .text-box .more {
   width: 100px;
@@ -301,6 +326,16 @@ header {
 #about .about-contents .swiper-area {
   max-width: 1000px;
   margin: 0 auto 0;
+}
+@media (max-width: 1100px) {
+  #about .about-contents .swiper-area {
+    max-width: 800px;
+  }
+}
+@media (max-width: 800px) {
+  #about .about-contents .swiper-area {
+    max-width: 600px;
+  }
 }
 #about .about-contents .swiper-area .swiper {
   height: 400px;

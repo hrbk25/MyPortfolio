@@ -100,11 +100,11 @@ let mySwiper = new Swiper ('.swiper', {
   loopAdditionalSlides: 2,
   centeredSlides: true,
   centeredSlidesBounds: true,
-  slidesPerView: 3, 
   spaceBetween: 10, 
   speed: 1500, 
   watchSlidesProgress: true,
   // effect: "fade",
+
   autoplay: {
     delay: 2000,
     disableOnInteraction: false,
@@ -113,6 +113,14 @@ let mySwiper = new Swiper ('.swiper', {
   navigation: {
     nextEl: '.swiper-button-next', 
     prevEl: '.swiper-button-prev', 
+  },
+
+  slidesPerView: 2, 
+
+  breakpoints: {
+    800: {
+      slidesPerView: 3,
+    },
   },
 
 });

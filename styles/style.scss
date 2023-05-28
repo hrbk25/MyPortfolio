@@ -1,5 +1,7 @@
 // loading
 
+@import './minxin';
+
 #loading {
   width: 100vw;
   height: 100vh;
@@ -52,7 +54,6 @@
   opacity: 0;
   visibility: hidden;
 }
-
 
 @keyframes sk-chase {
   100% { transform: rotate(360deg); } 
@@ -125,7 +126,9 @@ header{
     font-weight: bold;
     letter-spacing: 6px;
     z-index: 30;
-    // background-color: rgb(240, 245, 249, 0.3);
+    @include pc {
+      font-size: 50px;
+    }
     span{
       display: block;
       transform: translate(0, 105%);
@@ -173,11 +176,13 @@ header{
   font-size: 40px;
   letter-spacing: 1px;
   display: inline-block;
-  // margin: 80px 0 0;
   opacity: 0;
   transition-duration: 1000ms;
   transition-property: opacity, transform;
   transform: translate(-50px,0);
+  @include pc {
+    font-size: 30px;
+  }
 }
 .section-title.scroll-in{
   opacity: 1;
@@ -209,6 +214,9 @@ header{
     font-size: 30px;
     display: flex;
     justify-content: center;
+    @include pc {
+      font-size: 20px;
+    }
     img{
       width: 40%;
     }
@@ -223,11 +231,17 @@ header{
           display: inline-block;
           span{
             font-size: 24px;
+            @include pc {
+              font-size: 16px;
+            }
           }
         }
         p{
           font-size: 20px;
           padding: 2px;
+          @include pc {
+            font-size: 14px;
+          }
         }
       }
       .more{
@@ -303,6 +317,12 @@ header{
     .swiper-area{
       max-width: 1000px;
       margin: 0 auto 0;
+      @include pc {
+        max-width: 800px;
+      }
+      @include tab {
+        max-width: 600px;
+      }
       .swiper {
         // max-width: 500px;
         height: 400px;
