@@ -3,11 +3,11 @@
 // loading
 const followingDot = document.getElementById('following-dot');
 // console.log(followingDot);
-for(let i = 1; i<=6; i++){
+// for(let i = 1; i<=6; i++){
   const div = document.createElement('div');
   div.className = 'dot';
   followingDot.appendChild(div);
-}
+// }
 
 window.onload = function() {
   const loading = document.getElementById('loading');
