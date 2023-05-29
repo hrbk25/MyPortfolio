@@ -1,6 +1,6 @@
 $pc: 1100px; 
 $tab: 800px; 
-$sp: 480px;  
+$sp: 580px;  
 
 @mixin pc {
   @media (max-width: ($pc)) {
