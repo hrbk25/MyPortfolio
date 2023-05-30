@@ -129,6 +129,9 @@ header{
     @include pc {
       font-size: 50px;
     }
+    @include sp {
+      font-size: 20px;
+    }
     span{
       display: block;
       transform: translate(0, 105%);
@@ -183,6 +186,9 @@ header{
   @include pc {
     font-size: 30px;
   }
+  @include sp {
+    font-size: 26px;
+  }
 }
 .section-title.scroll-in{
   opacity: 1;
@@ -226,19 +232,22 @@ header{
     img{
       width: 40%;
       @include sp {
-        width: 100%;
+        width: 80%;
       }
     }
     .text-box{
       width: 50%;
       margin: auto 0;
       @include sp {
-        width: 100%;
-        text-align: center;
+        width: 90%;
+        margin: 0 auto;
       }
       .text{
         text-align: left;
         margin-bottom: 15px;
+        @include sp {
+          text-align: center;
+        }
         .name{
           margin-bottom: 15px;
           display: inline-block;
