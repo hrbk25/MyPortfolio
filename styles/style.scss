@@ -443,6 +443,7 @@ header{
       // justify-content: center;
       .before-me{
         width: 40%;
+        
       }
       .study{
         width: 50%;
@@ -455,6 +456,9 @@ header{
           opacity: 0;
           transition-duration: 1600ms;
           transition-property: opacity, transform;
+          @include pc {
+            font-size: 20px;
+          }
         }
         p:last-child{
           opacity: 0;

@@ -478,6 +478,11 @@ header {
   transition-duration: 1600ms;
   transition-property: opacity, transform;
 }
+@media (max-width: 1100px) {
+  #skills .skills-box .study-box .study p {
+    font-size: 20px;
+  }
+}
 #skills .skills-box .study-box .study p:last-child {
   opacity: 0;
   overflow: hidden;

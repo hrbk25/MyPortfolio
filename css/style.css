@@ -34,8 +34,19 @@ li{
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
-  text-align: center;
-  
+  text-align: center; 
+}
+
+@media (max-width: 1100px) {
+  .container {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    max-width: 600px;
+  }
 }
 
 section{
