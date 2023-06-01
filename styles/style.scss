@@ -177,6 +177,7 @@ header{
 // section title
 .section-title{
   font-size: 40px;
+  margin-bottom: 10px;
   letter-spacing: 1px;
   display: inline-block;
   opacity: 0;
@@ -352,7 +353,7 @@ header{
         max-width: 600px;
       }
       @include sp {
-        max-width: 200px;
+        max-width: 400px;
       }
       .swiper {
         // max-width: 500px;
@@ -375,6 +376,9 @@ header{
               left: 50%;
               bottom: -10%;
               transform: translate(-50%);
+              @include pc {
+                bottom: -25%;
+              }
             }
           }
           .swiper-slide:not(.swiper-slide-visible){
@@ -441,14 +445,23 @@ header{
     .study-box{
       display: flex;
       // justify-content: center;
+      @include sp {
+        display: block;
+      }
       .before-me{
-        width: 40%;
-        
+        width: 30%;
+        @include sp {
+          width: 80%;
+        }
       }
       .study{
-        width: 50%;
+        width: 40%;
         margin: auto 0;
         text-align: center;
+        @include sp {
+          width: 90%;
+          margin: 0 auto;
+        }
         p{
           font-size: 28px;
           font-weight: bold;
@@ -485,10 +498,13 @@ header{
         }
       }
       .after-me{
-        width: 40%;
+        width: 30%;
         opacity: 0;
         transition-duration: 1600ms;
         transition-property: opacity, transform;
+        @include sp {
+          width: 80%;
+        }
       }
       .after-me.scroll-in{
         opacity: 1;
