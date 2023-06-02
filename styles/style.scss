@@ -353,7 +353,7 @@ header{
         max-width: 600px;
       }
       @include sp {
-        max-width: 400px;
+        max-width: 300px;
       }
       .swiper {
         // max-width: 500px;
@@ -379,6 +379,9 @@ header{
               @include pc {
                 bottom: -25%;
               }
+              @include sp {
+                bottom: -80%;
+              }
             }
           }
           .swiper-slide:not(.swiper-slide-visible){
@@ -394,6 +397,9 @@ header{
         .swiper-button-prev {
           position: absolute;
           top: 50%;
+          @include tab {
+            top: 90%;
+          }
           &:after {
             position: absolute;
             content: "" !important;
@@ -410,6 +416,9 @@ header{
             border-color: transparent transparent transparent #C9D6DF;
             left: 100%;
           }
+          @include tab {
+            right: 100px;
+          }
         }
         .swiper-button-prev {
           left: 25px;
@@ -417,6 +426,9 @@ header{
             border-width: 16px 20px 16px 0;
             border-color: transparent #C9D6DF transparent transparent;
             right: 100%;
+          }
+          @include tab {
+            left: 100px;
           }
         }
       }

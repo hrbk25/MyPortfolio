@@ -386,7 +386,7 @@ header {
 }
 @media (max-width: 580px) {
   #about .about-contents .swiper-area {
-    max-width: 400px;
+    max-width: 300px;
   }
 }
 #about .about-contents .swiper-area .swiper {
@@ -418,6 +418,11 @@ header {
     bottom: -25%;
   }
 }
+@media (max-width: 580px) {
+  #about .about-contents .swiper-area .swiper .swiper-wrapper .swiper-slide .swiper-title {
+    bottom: -80%;
+  }
+}
 #about .about-contents .swiper-area .swiper .swiper-wrapper .swiper-slide:not(.swiper-slide-visible) {
   pointer-events: none;
   opacity: 0.3;
@@ -430,6 +435,12 @@ header {
 #about .about-contents .swiper-area .swiper .swiper-button-prev {
   position: absolute;
   top: 50%;
+}
+@media (max-width: 800px) {
+  #about .about-contents .swiper-area .swiper .swiper-button-next,
+  #about .about-contents .swiper-area .swiper .swiper-button-prev {
+    top: 90%;
+  }
 }
 #about .about-contents .swiper-area .swiper .swiper-button-next:after,
 #about .about-contents .swiper-area .swiper .swiper-button-prev:after {
@@ -448,6 +459,11 @@ header {
   border-color: transparent transparent transparent #C9D6DF;
   left: 100%;
 }
+@media (max-width: 800px) {
+  #about .about-contents .swiper-area .swiper .swiper-button-next {
+    right: 100px;
+  }
+}
 #about .about-contents .swiper-area .swiper .swiper-button-prev {
   left: 25px;
 }
@@ -455,6 +471,11 @@ header {
   border-width: 16px 20px 16px 0;
   border-color: transparent #C9D6DF transparent transparent;
   right: 100%;
+}
+@media (max-width: 800px) {
+  #about .about-contents .swiper-area .swiper .swiper-button-prev {
+    left: 100px;
+  }
 }
 
 @keyframes emphasis {
