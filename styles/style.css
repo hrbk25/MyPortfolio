@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #loading {
   width: 100vw;
   height: 100vh;
@@ -65,13 +66,31 @@ header {
 #page-header {
   opacity: 0;
   margin: 0 auto;
-  padding: 24px;
+  padding: 20px;
   background-color: rgba(240, 245, 249, 0.5);
   font-size: 16px;
+  transform: translateX(100%);
+  transition: ease 0.4s; /*ハンバーガーメニュークリック時のナビゲーションメニュー出現を遅延*/
+}
+@media (max-width: 580px) {
+  #page-header {
+    padding: 10px;
+    background-color: transparent;
+  }
 }
 #page-header ul {
   display: flex;
   justify-content: space-around;
+}
+@media (max-width: 580px) {
+  #page-header ul {
+    display: inline-block;
+  }
+}
+@media (max-width: 580px) {
+  #page-header ul li {
+    margin-top: 10px;
+  }
 }
 
 #page-header.-delay {
@@ -86,6 +105,116 @@ header {
   100% {
     opacity: 1;
     transform: translateY(0%);
+  }
+}
+/* ハンバーガーメニュー */
+.header__hamburger {
+  width: 48px;
+  height: 100%;
+  background-color: #52616B;
+}
+
+.hamburger {
+  border-color: transparent; /*buttonタグデフォルトスタイルを打ち消し*/
+  z-index: 9999;
+}
+
+.hamburger span {
+  width: 50%;
+  height: 2px;
+  background-color: #52616B;
+  position: relative;
+  transition: ease 0.4s; /*ハンバーガーメニュークリック時の三本線の動きを遅延*/
+  display: block;
+}
+
+.hamburger span:nth-child(1) {
+  top: 5px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 5px;
+  margin: 8px 0;
+}
+
+.hamburger span:nth-child(3) {
+  top: 5px;
+}
+
+.nav.active {
+  transform: translateX(0);
+}
+
+.hamburger.active span:nth-child(1) {
+  top: 15px;
+  transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  top: -5px;
+  transform: rotate(-45deg);
+}
+
+/* ヘッダーのナビ部分 */
+.nav {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(100%);
+  transition: ease 0.4s;
+}
+@media (max-width: 580px) {
+  .nav {
+    text-align: center;
+    background-color: #F0F5F9;
+  }
+}
+
+@media screen and (min-width: 580px) {
+  .nav {
+    position: static;
+    transform: initial;
+    height: inherit;
+  }
+}
+/*PC時のナビゲーションメニュー、横並びにする*/
+@media screen and (min-width: 580px) {
+  .nav__lists {
+    width: 100%;
+    align-items: center;
+    height: initial;
+    justify-content: space-between;
+  }
+}
+.nav-lists {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@media screen and (min-width: 580px) {
+  .nav-lists {
+    padding-top: inherit;
+    padding-bottom: inherit;
+  }
+}
+/*ハンバーガーメニュー*/
+.hamburger {
+  background-color: transparent;
+  border-color: transparent;
+  z-index: 9999;
+}
+
+@media screen and (min-width: 580px) {
+  /*PC時非表示にする*/
+  .hamburger {
+    display: none;
   }
 }
 .main-img {
