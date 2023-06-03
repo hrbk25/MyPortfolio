@@ -209,7 +209,7 @@ header {
 }
 @media (max-width: 580px) {
   .section-title {
-    font-size: 26px;
+    font-size: 20px;
   }
 }
 
@@ -225,6 +225,11 @@ header {
   bottom: 0;
   border-bottom: 5px solid #52616B;
   animation: border_anim 0.5s linear forwards;
+}
+@media (max-width: 580px) {
+  .section-title.scroll-in:before {
+    border-bottom: 3px solid #52616B;
+  }
 }
 
 @keyframes border_anim {
@@ -372,7 +377,7 @@ header {
 
 #about .about-contents .swiper-area {
   max-width: 1000px;
-  margin: 0 auto 0;
+  margin: 30px auto 0;
 }
 @media (max-width: 1100px) {
   #about .about-contents .swiper-area {
@@ -421,6 +426,7 @@ header {
 @media (max-width: 580px) {
   #about .about-contents .swiper-area .swiper .swiper-wrapper .swiper-slide .swiper-title {
     bottom: -80%;
+    font-size: 16px;
   }
 }
 #about .about-contents .swiper-area .swiper .swiper-wrapper .swiper-slide:not(.swiper-slide-visible) {
@@ -439,7 +445,7 @@ header {
 @media (max-width: 800px) {
   #about .about-contents .swiper-area .swiper .swiper-button-next,
   #about .about-contents .swiper-area .swiper .swiper-button-prev {
-    top: 90%;
+    top: 85%;
   }
 }
 #about .about-contents .swiper-area .swiper .swiper-button-next:after,
@@ -563,12 +569,16 @@ header {
   opacity: 1;
 }
 #skills .skills-box .skills-title {
-  margin: 50px 0 0 20px;
   font-size: 28px;
-  text-align: left;
+  display: inline-block;
   opacity: 0;
   transition-duration: 1600ms;
   transition-property: opacity, transform;
+}
+@media (max-width: 580px) {
+  #skills .skills-box .skills-title {
+    font-size: 20px;
+  }
 }
 #skills .skills-box .skills-list {
   display: flex;
@@ -581,10 +591,21 @@ header {
   transition-duration: 1600ms;
   transition-property: opacity, transform;
 }
+@media (max-width: 580px) {
+  #skills .skills-box .skills-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 #skills .skills-box .skills-list li {
   width: 12%;
   transform: translate(0, 130%);
   transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+@media (max-width: 1100px) {
+  #skills .skills-box .skills-list li {
+    width: 25%;
+  }
 }
 #skills .skills-box .skills-title.scroll-in, #skills .skills-box .skills-list.scroll-in {
   opacity: 1;
@@ -614,7 +635,7 @@ header {
   left: 0;
   bottom: 0;
   border-bottom: 2px solid #C9D6DF;
-  animation: border_anim 1.3s linear forwards;
+  animation: border_anim 0.5s linear forwards;
 }
 
 @keyframes fadeInArrow {

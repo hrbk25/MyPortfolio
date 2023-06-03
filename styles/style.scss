@@ -188,7 +188,7 @@ header{
     font-size: 30px;
   }
   @include sp {
-    font-size: 26px;
+    font-size: 20px;
   }
 }
 .section-title.scroll-in{
@@ -202,6 +202,9 @@ header{
   bottom: 0;
   border-bottom: 5px solid #52616B;
   animation: border_anim 0.5s linear forwards;
+  @include sp {
+    border-bottom: 3px solid #52616B;
+  }
 }
 
 @keyframes border_anim {
@@ -345,7 +348,7 @@ header{
     // margin: 50px 0;
     .swiper-area{
       max-width: 1000px;
-      margin: 0 auto 0;
+      margin: 30px auto 0;
       @include pc {
         max-width: 800px;
       }
@@ -381,6 +384,7 @@ header{
               }
               @include sp {
                 bottom: -80%;
+                font-size: 16px;
               }
             }
           }
@@ -398,7 +402,7 @@ header{
           position: absolute;
           top: 50%;
           @include tab {
-            top: 90%;
+            top: 85%;
           }
           &:after {
             position: absolute;
@@ -523,13 +527,15 @@ header{
       }
     }
     .skills-title{
-      margin: 50px 0 0 20px;
+      // margin: 50px 0 0 20px;
       font-size: 28px;
-      text-align: left;
-      // width: 10%;
+      display: inline-block;
       opacity: 0;
       transition-duration: 1600ms;
       transition-property: opacity, transform;
+      @include sp {
+        font-size: 20px;
+      }
     }
     .skills-list{
       display: flex;
@@ -541,10 +547,17 @@ header{
       overflow: hidden;
       transition-duration: 1600ms;
       transition-property: opacity, transform;
+      @include sp {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
       li{
         width: 12%;
         transform: translate(0, 130%);
         transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+        @include pc {
+          width: 25%;
+        }
       }
     }
     .skills-title.scroll-in, .skills-list.scroll-in{
@@ -566,7 +579,7 @@ header{
       left: 0;
       bottom: 0;
       border-bottom: 2px solid #C9D6DF;
-      animation: border_anim 1.3s linear forwards;
+      animation: border_anim 0.5s linear forwards;
     }
   }
 }
