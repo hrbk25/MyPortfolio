@@ -205,13 +205,13 @@ header {
     justify-content: space-between;
   }
 }
-.nav-lists {
+.nav-list {
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
 @media screen and (min-width: 580px) {
-  .nav-lists {
+  .nav-list {
     padding-top: inherit;
     padding-bottom: inherit;
   }
