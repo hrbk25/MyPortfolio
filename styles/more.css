@@ -526,17 +526,12 @@ header {
     background-color: rgba(170, 143, 123, 0);
   }
 }
-.inner {
-  display: flex;
-  justify-content: center;
-}
-
 .point {
   display: block;
   position: relative;
   width: 20px;
   height: 20px;
-  margin: 0 20px;
+  margin: 200px 0px;
   background-color: #ccc;
   border-radius: 50%;
   transition: background-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
