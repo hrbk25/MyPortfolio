@@ -118,18 +118,16 @@ function scrollDisplay(el) {
 // Career
 
 const point = document.querySelectorAll('.point');
-const aaa = point.forEach( el => {
-  console.log(el);
-  el.addEventListener('click', () => {
-    el.classList.toggle('-active');
-    // e.currentTarget.classList.add('-active');
-    // console.log(e.currentTarget);
-  })
-});
+const text = document.querySelectorAll('.text');
 
+scrollDisplay(point);
+scrollDisplay(text);
 
-// $target = $('.point');
-// $target.on('click', e=> {
-//   $target.removeClass('-active');
-//   $(e.currentTarget).addClass('-active');
+// const aaa = point.forEach( el => {
+//   console.log(el);
+//   el.addEventListener('click', () => {
+//     el.classList.toggle('-active');
+//     // e.currentTarget.classList.add('-active');
+//     // console.log(e.currentTarget);
+//   })
 // });
