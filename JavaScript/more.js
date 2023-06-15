@@ -75,17 +75,9 @@ scrollDisplay(sectionTitle);
 
 const myName = document.querySelector('.name');
 const aboutP = document.querySelectorAll('p');
-const more = document.querySelector('.more');
-const afterMe = document.querySelector('.after-me');
-const skillsTitle = document.querySelectorAll('.skills-title');
-const skillsList = document.querySelectorAll('.skills-list');
 
 scrollDisplay(myName);
 scrollDisplay(aboutP);
-scrollDisplay(more);
-// scrollDisplay(afterMe);
-// scrollDisplay(skillsTitle);
-// scrollDisplay(skillsList);
 
 
 function scrollDisplay(el) {
@@ -117,11 +109,45 @@ function scrollDisplay(el) {
 
 // Career
 
+
+//着火点になる要素
+const fadeInLine = document.querySelectorAll(".yellow_circle_line");
+ 
+//オプションの設定
+const options = {
+    rootMargin: '0px',//着火点になる要素の余白を設定できる
+    threshold: 0, //着火点になる要素がどのくらいの表示割合で、表示されるかの割合を設定できる
+};
+
+//intersection observer apiを呼び出す
+const observer = new IntersectionObserver(showElement, options);
+
+
+
+//.fadeIn_lineクラスに到達したらintersection observer apiを実行する
+fadeInLine.forEach((fadeInLine) => {
+    observer.observe(fadeInLine);
+});
+
+//要素が表示した後の処理
+function showElement(entries) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("active");
+        }
+    });
+}
+
+
+
 const point = document.querySelectorAll('.point');
-const text = document.querySelectorAll('.text');
+const pointLine = document.querySelectorAll('.point-line');
+// const text = document.querySelectorAll('.text');
 
 scrollDisplay(point);
-scrollDisplay(text);
+scrollDisplay(pointLine);
+// scrollDisplay(text);
 
 // const aaa = point.forEach( el => {
 //   console.log(el);

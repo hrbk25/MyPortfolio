@@ -462,32 +462,6 @@ header {
     font-size: 10px;
   }
 }
-#about .about-me .text-box .more {
-  width: 100px;
-  margin-left: auto;
-}
-#about .about-me .text-box .more a {
-  display: inline-block;
-  width: 100%;
-  text-align: left;
-  border-radius: 0;
-}
-#about .about-me .text-box .more a:after {
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  content: "";
-  transition: all 0.3s;
-  background: #C9D6DF;
-}
-#about .about-me .text-box .more a:after {
-  right: 0;
-  bottom: 0;
-}
-#about .about-me .text-box .more a:hover:after {
-  width: 0;
-  opacity: 0.6;
-}
 
 .about-me .text-box .text .name, .about-me .text-box .text p {
   opacity: 0;
@@ -506,15 +480,6 @@ header {
   border-bottom: 2px solid #C9D6DF;
   animation: border_anim 0.8s linear forwards;
 }
-.about-me .text-box .more {
-  opacity: 0;
-  transition-duration: 1600ms;
-  transition-property: opacity, transform;
-}
-.about-me .text-box .more.scroll-in {
-  opacity: 1;
-  transform: translate(0, 0);
-}
 
 @keyframes pulseMotion {
   0% {
@@ -526,11 +491,28 @@ header {
     background-color: rgba(240, 245, 249, 0);
   }
 }
+@keyframes pointline1 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 200px;
+  }
+}
+@keyframes pointline2 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 100px;
+  }
+}
 .career-box {
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  height: 500px;
+  margin-top: 100px;
+  height: 100px;
+  text-align: left;
 }
 
 .point {
@@ -543,9 +525,37 @@ header {
   transition: background-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
   cursor: pointer;
 }
+.point .point-line {
+  content: " ";
+  height: 0px;
+  width: 10px;
+  background-color: #C9D6DF;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+.point .career-text {
+  width: 80%;
+}
+
+.point-line {
+  height: 0;
+}
 
 .point.scroll-in {
   background-color: #52616B;
+}
+
+.point-line.scroll-in {
+  height: 100px;
+  animation: pointline1 1s forwards linear;
+}
+
+.career-box:last-child .point-line.scroll-in {
+  animation: pointline2 0.5s forwards linear;
 }
 
 .point.scroll-in:after {
@@ -567,13 +577,4 @@ header {
   border-radius: 50%;
   transition: opacity linear 0.4s;
   content: "";
-}
-
-.career-text {
-  width: 70%;
-  opacity: 0;
-}
-
-.career-text.scroll-in {
-  opacity: 1;
 }/*# sourceMappingURL=more.css.map */

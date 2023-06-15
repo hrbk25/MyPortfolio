@@ -418,33 +418,6 @@ padding-bottom: 100px;
           }
         }
       }
-      .more{
-        width: 100px;
-        margin-left: auto;
-        a{
-          display: inline-block;
-          width: 100%;
-          text-align: left;
-          border-radius: 0;
-        }
-        a:after {
-          position: absolute;
-          width: 100%;
-          height: 2px;
-          content: '';
-          -webkit-transition: all .3s;
-          transition: all .3s;
-          background: #C9D6DF;
-        }  
-        a:after {
-          right: 0;
-          bottom: 0;
-        }
-        a:hover:after {
-          width: 0;
-          opacity: 0.6;
-        }
-      }
     }
   }
 }
@@ -471,20 +444,45 @@ padding-bottom: 100px;
         animation: border_anim 0.8s linear forwards; //border_anim section-titleのところに
       }
     }
-    .more{
-      opacity: 0;
-      transition-duration: 1600ms;
-      transition-property: opacity, transform;
-    }
-    .more.scroll-in{
-      opacity: 1;
-      transform: translate(0,0);
-    }
   }
 }
 
 
 // Career
+
+// .yellow_circle {
+//   // position : relative;
+//   // color: red;
+//   // margin: 0 auto;
+//   // font-size: 30px;
+//   .yellow_circle_line {
+//       content          : " ";
+//       height           : 0px;
+//       width            : 10px;
+//       background-color:red;
+//       position         : absolute;
+//       // top              : 6px;
+//       left             : 50%;
+//       transform        : translateX(-50%);
+//       -webkit-transform: translateX(-50%);
+//       -ms-transform    : translateX(-50%);
+//   }
+// }
+// .yellow_circle_line {
+//     height: 0px;
+// }
+ 
+// .yellow_circle_line.active {
+//     height   : 300px;
+//     animation: yellow_circle 2.0s forwards linear;
+// }
+ 
+
+
+
+
+
+
 
 @keyframes pulseMotion {
   0% {
@@ -497,11 +495,34 @@ padding-bottom: 100px;
   }
 }
 
+@keyframes pointline1 {
+  0% {
+      height: 0px;
+  }
+
+  100% {
+      height: 200px;
+  }
+}
+
+@keyframes pointline2 {
+  0% {
+      height: 0px;
+  }
+
+  100% {
+      height: 100px;
+  }
+}
+
+
+
 .career-box{
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  height: 500px;
+  margin-top: 100px;
+  height: 100px;
+  text-align: left;
 }
 
 .point {
@@ -514,10 +535,38 @@ padding-bottom: 100px;
   border-radius: 50%;
   transition: background-color cubic-bezier(0.215, 0.61, 0.355, 1) .4s;
   cursor: pointer;
+  .point-line{
+    content          : " ";
+    height           : 0px;
+    width            : 10px;
+    background-color:#C9D6DF;
+    position         : absolute;
+    top              : 20px;
+    left             : 50%;
+    transform        : translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform    : translateX(-50%);
+  }
+  .career-text{
+    width: 80%;
+  }
+}
+
+.point-line{
+  height: 0;
 }
 
 .point.scroll-in{
   background-color: #52616B;
+}
+
+.point-line.scroll-in{
+  height   : 100px;
+  animation: pointline1 1.0s forwards linear;
+}
+
+.career-box:last-child .point-line.scroll-in{
+  animation: pointline2 0.5s forwards linear;
 }
 
 .point.scroll-in:after {
@@ -539,17 +588,6 @@ padding-bottom: 100px;
   border-radius: 50%;
   transition: opacity linear 0.4s;
   content: '';
-}
-
-
-.career-text{
-  width: 70%;
-  
-  opacity: 0;
-}
-
-.career-text.scroll-in{
-  opacity: 1;
 }
 
 
