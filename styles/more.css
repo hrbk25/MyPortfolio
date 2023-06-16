@@ -509,13 +509,12 @@ header {
 }
 .career-box {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 100px;
   height: 100px;
   text-align: left;
 }
-
-.point {
+.career-box .point {
   display: block;
   position: relative;
   width: 20px;
@@ -525,7 +524,7 @@ header {
   transition: background-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
   cursor: pointer;
 }
-.point .point-line {
+.career-box .point .point-line {
   content: " ";
   height: 0px;
   width: 10px;
@@ -537,8 +536,9 @@ header {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
 }
-.point .career-text {
-  width: 80%;
+.career-box .career-text {
+  margin-left: 60px;
+  width: 50%;
 }
 
 .point-line {
