@@ -15,35 +15,6 @@ window.onload = function() {
   load.classList.add('loaded');
 }
 
-
-// page-header main-img
-
-const pageHeader = document.getElementById('page-header');
-const title = document.getElementById('title');
-const homeImg = document.getElementById('home-img');
-
-createTitle();
-
-setInterval(() => {
-  title.classList.add('-visible');
-}, 300);
-
-setInterval(() => {
-  pageHeader.classList.add('-delay');
-  homeImg.classList.add('-delay');
-}, 1900);
-
-function createTitle() { //文字列を１文字ずつ配列に入れて、それをspanに入れて生成。
-  const mainTitle = `Hiro's Portofolio`;
-  let arrayTitle = mainTitle.split('');
-    
-  for(let i = 0; i < arrayTitle.length; i++) {
-    let span = document.createElement('span');
-    span.textContent = arrayTitle[i];
-    title.appendChild(span);
-  }
-}
-
 // hamburger
 
 const ham = document.querySelector('#js-hamburger'); 
