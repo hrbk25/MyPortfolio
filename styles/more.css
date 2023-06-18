@@ -577,4 +577,9 @@ header {
   border-radius: 50%;
   transition: opacity linear 0.4s;
   content: "";
+}
+
+#strength .strength-area {
+  margin-top: 100px;
+  display: flex;
 }/*# sourceMappingURL=more.css.map */
