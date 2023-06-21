@@ -229,24 +229,21 @@ header {
     display: none;
   }
 }
-.more-title {
+.title-wrapper {
+  background-color: rgba(240, 245, 249, 0.5);
+}
+.title-wrapper .main-title {
   margin: 0;
-  font-size: 80px;
+  font-size: 150px;
   font-weight: bold;
-  position: absolute;
   text-align: center;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
   background: url(../img/home.jpg);
-  background-size: auto 200%;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 8s linear infinite;
+  animation: shine 10s linear infinite;
 }
-.more-title:nth-child(2) {
+.title-wrapper .main-title:nth-child(2) {
   top: 50vh;
 }
 @keyframes shine {
@@ -254,7 +251,7 @@ header {
     background-position: center 0;
   }
   to {
-    background-position: center 200%;
+    background-position: center 119%;
   }
 }
 
