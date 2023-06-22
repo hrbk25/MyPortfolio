@@ -34,6 +34,31 @@ ham.addEventListener('click', () => {
 });
 
 
+// main-title
+
+const pageHeader = document.getElementById('page-header');
+const mainTitle = document.getElementById('main-title');
+
+createTitle()
+
+function createTitle() { //文字列を１文字ずつ配列に入れて、それをspanに入れて生成。
+  const title = `Hiro's Profile`;
+  let arrayTitle = title.split('');
+    
+  for(let i = 0; i < arrayTitle.length; i++) {
+    let span = document.createElement('span');
+    span.textContent = arrayTitle[i];
+    mainTitle.appendChild(span);
+  }
+}
+
+setInterval(() => {
+  mainTitle.classList.add('-visible');
+}, 300);
+
+setInterval(() => {
+  pageHeader.classList.add('-delay');
+}, 1900);
 
 
 // 共通section title

@@ -252,26 +252,33 @@ padding-bottom: 100px;
 // more-main
 
 .title-wrapper{
-  background-color: rgb(240, 245, 249, 0.5);
-  .main-title{
+  // background-color: rgb(240, 245, 249, 0.5);
+  position: relative;
+  height: 350px;
+  z-index: 20;
+  #main-title{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
     margin: 0;
     font-size: 150px;
     font-weight: bold;
-    // background-color: #52616B;
-    // position: absolute;
-    // top: 15vh;
     text-align: center;
-    // left: 50%;
-    // transform: translateX(-50%);
-    // color: white;
-    background:url(../img/home.jpg);
-    // background-size: auto 200%;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    animation: shine 10s linear infinite;
-    &:nth-child(2) {
-      top: 50vh;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    letter-spacing: 6px;
+    color: #F0F5F9;
+    span{
+      display: block;
+      transform: translate(0, 100%);
+      transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+      @for $i from 1 through 13 {
+        &:nth-child(#{$i + 1}) {
+          $delay: $i * 0.07 + s;
+          transition-delay: $delay;
+        }
+      }
     }
     @keyframes shine {
       from {
@@ -284,6 +291,16 @@ padding-bottom: 100px;
   }
 }
 
+#main-title.-visible{
+  span{
+    transform: translate(0, 0);
+    background:url(../img/home.jpg);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: shine 10s linear infinite;
+  }
+}
 
 // section 共通
 

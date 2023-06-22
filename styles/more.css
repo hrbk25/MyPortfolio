@@ -230,21 +230,67 @@ header {
   }
 }
 .title-wrapper {
-  background-color: rgba(240, 245, 249, 0.5);
+  position: relative;
+  height: 350px;
+  z-index: 20;
 }
-.title-wrapper .main-title {
+.title-wrapper #main-title {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
   margin: 0;
   font-size: 150px;
   font-weight: bold;
   text-align: center;
-  background: url(../img/home.jpg);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  animation: shine 10s linear infinite;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  letter-spacing: 6px;
+  color: #F0F5F9;
 }
-.title-wrapper .main-title:nth-child(2) {
-  top: 50vh;
+.title-wrapper #main-title span {
+  display: block;
+  transform: translate(0, 100%);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+.title-wrapper #main-title span:nth-child(2) {
+  transition-delay: 0.07s;
+}
+.title-wrapper #main-title span:nth-child(3) {
+  transition-delay: 0.14s;
+}
+.title-wrapper #main-title span:nth-child(4) {
+  transition-delay: 0.21s;
+}
+.title-wrapper #main-title span:nth-child(5) {
+  transition-delay: 0.28s;
+}
+.title-wrapper #main-title span:nth-child(6) {
+  transition-delay: 0.35s;
+}
+.title-wrapper #main-title span:nth-child(7) {
+  transition-delay: 0.42s;
+}
+.title-wrapper #main-title span:nth-child(8) {
+  transition-delay: 0.49s;
+}
+.title-wrapper #main-title span:nth-child(9) {
+  transition-delay: 0.56s;
+}
+.title-wrapper #main-title span:nth-child(10) {
+  transition-delay: 0.63s;
+}
+.title-wrapper #main-title span:nth-child(11) {
+  transition-delay: 0.7s;
+}
+.title-wrapper #main-title span:nth-child(12) {
+  transition-delay: 0.77s;
+}
+.title-wrapper #main-title span:nth-child(13) {
+  transition-delay: 0.84s;
+}
+.title-wrapper #main-title span:nth-child(14) {
+  transition-delay: 0.91s;
 }
 @keyframes shine {
   from {
@@ -253,6 +299,15 @@ header {
   to {
     background-position: center 119%;
   }
+}
+
+#main-title.-visible span {
+  transform: translate(0, 0);
+  background: url(../img/home.jpg);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: shine 10s linear infinite;
 }
 
 .section-title {
