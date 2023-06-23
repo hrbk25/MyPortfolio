@@ -254,15 +254,15 @@ padding-bottom: 100px;
 .title-wrapper{
   // background-color: rgb(240, 245, 249, 0.5);
   position: relative;
-  height: 350px;
+  height: 300px;
   z-index: 20;
   #main-title{
     display: flex;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 70%;
     margin: 0;
-    font-size: 110px;
+    font-size: 100px;
     font-weight: bold;
     text-align: center;
     overflow: hidden;
@@ -282,10 +282,10 @@ padding-bottom: 100px;
     }
     @keyframes shine {
       from {
-        background-position: center 80%;
+        background-position: center 70%;
       }
       to {
-        background-position: center 280%;
+        background-position: center 265%;
       }
     }
   }
@@ -305,7 +305,7 @@ padding-bottom: 100px;
 #main-title.-delay{
   span{
     transform: translate(0, 0);
-    background:url(../img/color3.jpeg);
+    background:url(../img/6A04DFD6-CDB8-44EF-BA74-BBF458BFBC66_4_5005_c.jpeg);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
