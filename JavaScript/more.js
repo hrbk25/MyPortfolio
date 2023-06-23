@@ -58,6 +58,7 @@ setInterval(() => {
 
 setInterval(() => {
   pageHeader.classList.add('-delay');
+  mainTitle.classList.add('-delay');
 }, 1900);
 
 
