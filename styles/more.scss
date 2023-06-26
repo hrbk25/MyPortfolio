@@ -294,18 +294,13 @@ padding-bottom: 100px;
 #main-title.-visible{
   span{
     transform: translate(0, 0);
-    // background:url(../img/water.jpeg);
-    // background-clip: text;
-    // -webkit-text-fill-color: transparent;
-    // -webkit-background-clip: text;
-    // animation: shine 10s linear infinite;
   }
 }
 
 #main-title.-delay{
   span{
     transform: translate(0, 0);
-    background:url(../img/6A04DFD6-CDB8-44EF-BA74-BBF458BFBC66_4_5005_c.jpeg);
+    background:url(../img/color3.jpeg);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -597,5 +592,15 @@ padding-bottom: 100px;
   .strength-area{
     margin-top: 100px;
     display: flex;
+    justify-content: space-around;
+    margin: 0 20px;
+    .strength-box{
+      width: 30%;
+      .strength-text{
+        text-align: left;
+        margin-top: 20px;
+        text-align: justify;
+      }
+    }
   }
 }
