@@ -154,3 +154,9 @@ scrollDisplay(pointLine);
 //     // console.log(e.currentTarget);
 //   })
 // });
+
+// strength
+
+const strengthArea = document.querySelectorAll('.strength-area');
+
+scrollDisplay(strengthArea);

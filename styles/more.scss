@@ -565,7 +565,7 @@ padding-bottom: 100px;
 }
 
 .point.scroll-in:after {
-  animation: pulseMotion 1.4s linear infinite;
+  animation: pulseMotion 2.5s linear infinite;
 }
 
 .point:focus {
@@ -594,13 +594,22 @@ padding-bottom: 100px;
     display: flex;
     justify-content: space-around;
     margin: 0 20px;
+    opacity: 0;
+    transition-duration: 1600ms;
+    transition-property: opacity, transform;
     .strength-box{
       width: 30%;
+      .strength-title{
+        font-size: 18px;
+      }
       .strength-text{
         text-align: left;
         margin-top: 20px;
         text-align: justify;
       }
     }
+  }
+  .strength-area.scroll-in{
+    opacity: 1;
   }
 }

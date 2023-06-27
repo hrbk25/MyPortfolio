@@ -540,7 +540,7 @@ header {
 }
 
 .point.scroll-in:after {
-  animation: pulseMotion 1.4s linear infinite;
+  animation: pulseMotion 2.5s linear infinite;
 }
 
 .point:focus {
@@ -565,12 +565,21 @@ header {
   display: flex;
   justify-content: space-around;
   margin: 0 20px;
+  opacity: 0;
+  transition-duration: 1600ms;
+  transition-property: opacity, transform;
 }
 #strength .strength-area .strength-box {
   width: 30%;
+}
+#strength .strength-area .strength-box .strength-title {
+  font-size: 18px;
 }
 #strength .strength-area .strength-box .strength-text {
   text-align: left;
   margin-top: 20px;
   text-align: justify;
+}
+#strength .strength-area.scroll-in {
+  opacity: 1;
 }/*# sourceMappingURL=more.css.map */
