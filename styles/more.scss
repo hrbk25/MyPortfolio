@@ -498,6 +498,16 @@ padding-bottom: 100px;
       height: 200px;
   }
 }
+@keyframes pointline3 {
+  0% {
+      height: 0px;
+  }
+
+  100% {
+      height: 400px;
+  }
+}
+
 
 @keyframes pointline2 {
   0% {
@@ -517,6 +527,9 @@ padding-bottom: 100px;
   margin-top: 100px;
   height: 100px;
   text-align: left;
+  @include tab {
+    height: 250px;
+  }
   .point {
     display: block;
     position: relative;
@@ -558,10 +571,16 @@ padding-bottom: 100px;
 .point-line.scroll-in{
   height   : 100px;
   animation: pointline1 1.0s forwards linear;
+  @include tab {
+    animation: pointline3 2.0s forwards linear;
+  }
 }
 
 .career-box:last-child .point-line.scroll-in{
   animation: pointline2 0.5s forwards linear;
+  @include tab {
+    animation: pointline1 2.0s forwards linear;
+  }
 }
 
 .point.scroll-in:after {
@@ -597,8 +616,14 @@ padding-bottom: 100px;
     opacity: 0;
     transition-duration: 1600ms;
     transition-property: opacity, transform;
+    @include tab {
+      display: block;
+    }
     .strength-box{
       width: 30%;
+      @include tab {
+        width: 80%;
+      }
       .strength-title{
         font-size: 18px;
       }

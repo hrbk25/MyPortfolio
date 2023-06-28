@@ -480,6 +480,14 @@ header {
     height: 200px;
   }
 }
+@keyframes pointline3 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 400px;
+  }
+}
 @keyframes pointline2 {
   0% {
     height: 0px;
@@ -494,6 +502,11 @@ header {
   margin-top: 100px;
   height: 100px;
   text-align: left;
+}
+@media (max-width: 800px) {
+  .career-box {
+    height: 250px;
+  }
 }
 .career-box .point {
   display: block;
@@ -534,9 +547,19 @@ header {
   height: 100px;
   animation: pointline1 1s forwards linear;
 }
+@media (max-width: 800px) {
+  .point-line.scroll-in {
+    animation: pointline3 2s forwards linear;
+  }
+}
 
 .career-box:last-child .point-line.scroll-in {
   animation: pointline2 0.5s forwards linear;
+}
+@media (max-width: 800px) {
+  .career-box:last-child .point-line.scroll-in {
+    animation: pointline1 2s forwards linear;
+  }
 }
 
 .point.scroll-in:after {
@@ -569,8 +592,18 @@ header {
   transition-duration: 1600ms;
   transition-property: opacity, transform;
 }
+@media (max-width: 800px) {
+  #strength .strength-area {
+    display: block;
+  }
+}
 #strength .strength-area .strength-box {
   width: 30%;
+}
+@media (max-width: 800px) {
+  #strength .strength-area .strength-box {
+    width: 80%;
+  }
 }
 #strength .strength-area .strength-box .strength-title {
   font-size: 18px;
