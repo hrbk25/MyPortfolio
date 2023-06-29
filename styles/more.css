@@ -248,6 +248,11 @@ header {
   letter-spacing: 6px;
   color: #C9D6DF;
 }
+@media (max-width: 800px) {
+  .title-wrapper #main-title {
+    font-size: 50px;
+  }
+}
 .title-wrapper #main-title span {
   display: block;
   transform: translate(0, 100%);
@@ -300,6 +305,14 @@ header {
     background-position: center 265%;
   }
 }
+@keyframes shine2 {
+  from {
+    background-position: center 50%;
+  }
+  to {
+    background-position: center 200%;
+  }
+}
 
 #main-title.-visible span {
   transform: translate(0, 0);
@@ -312,6 +325,11 @@ header {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   animation: shine 8s linear infinite;
+}
+@media (max-width: 800px) {
+  #main-title.-delay span {
+    animation: shine2 8s linear infinite;
+  }
 }
 
 .section-title {
@@ -603,6 +621,7 @@ header {
 @media (max-width: 800px) {
   #strength .strength-area .strength-box {
     width: 80%;
+    margin: 0 auto;
   }
 }
 #strength .strength-area .strength-box .strength-title {

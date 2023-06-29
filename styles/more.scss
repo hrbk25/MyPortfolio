@@ -269,6 +269,9 @@ padding-bottom: 100px;
     transform: translate(-50%, -50%);
     letter-spacing: 6px;
     color:#C9D6DF;
+    @include tab {
+      font-size: 50px;
+    }
     span{
       display: block;
       transform: translate(0, 100%);
@@ -288,6 +291,14 @@ padding-bottom: 100px;
         background-position: center 265%;
       }
     }
+    @keyframes shine2 {
+      from {
+        background-position: center 50%;
+      }
+      to {
+        background-position: center 200%;
+      }
+    }
   }
 }
 
@@ -305,6 +316,9 @@ padding-bottom: 100px;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     animation: shine 8s linear infinite;
+    @include tab {
+      animation: shine2 8s linear infinite;
+    }
   }
 }
 
@@ -623,6 +637,7 @@ padding-bottom: 100px;
       width: 30%;
       @include tab {
         width: 80%;
+        margin: 0 auto;
       }
       .strength-title{
         font-size: 18px;
