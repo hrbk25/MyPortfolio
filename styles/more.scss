@@ -256,6 +256,12 @@ padding-bottom: 100px;
   position: relative;
   height: 300px;
   z-index: 20;
+  @include tab {
+    height: 150px;
+  }
+  @include sp {
+    height: 80px;
+  }
   #main-title{
     display: flex;
     position: absolute;
@@ -271,9 +277,11 @@ padding-bottom: 100px;
     color:#C9D6DF;
     @include tab {
       font-size: 50px;
+      top: 100%;
     }
     @include sp {
       font-size: 30px;
+      top: 130%;
     }
     span{
       display: block;
@@ -547,6 +555,9 @@ padding-bottom: 100px;
   @include tab {
     height: 150px;
   }
+  @include sp {
+    height: 200px;
+  }
   .point {
     display: block;
     position: relative;
@@ -663,5 +674,27 @@ padding-bottom: 100px;
   }
   .strength-area.scroll-in{
     opacity: 1;
+  }
+}
+
+
+// CONTACT
+footer{
+  background-color: rgb(240, 245, 249, 0.5);
+  margin-top: 50px;
+  padding: 30px 0 30px 0;
+  .footer-box{
+    display: flex;
+    justify-content: space-between;
+    p{
+      padding-left: 20px;
+    }
+    .icon-box{
+      display: flex;
+      i{
+        font-size: 20px;
+        padding-right: 20px;
+      }
+    }
   }
 }

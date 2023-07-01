@@ -234,6 +234,16 @@ header {
   height: 300px;
   z-index: 20;
 }
+@media (max-width: 800px) {
+  .title-wrapper {
+    height: 150px;
+  }
+}
+@media (max-width: 580px) {
+  .title-wrapper {
+    height: 80px;
+  }
+}
 .title-wrapper #main-title {
   display: flex;
   position: absolute;
@@ -251,11 +261,13 @@ header {
 @media (max-width: 800px) {
   .title-wrapper #main-title {
     font-size: 50px;
+    top: 100%;
   }
 }
 @media (max-width: 580px) {
   .title-wrapper #main-title {
     font-size: 30px;
+    top: 130%;
   }
 }
 .title-wrapper #main-title span {
@@ -531,6 +543,11 @@ header {
     height: 150px;
   }
 }
+@media (max-width: 580px) {
+  .career-box {
+    height: 200px;
+  }
+}
 .career-box .point {
   display: block;
   position: relative;
@@ -654,4 +671,24 @@ header {
 }
 #strength .strength-area.scroll-in {
   opacity: 1;
+}
+
+footer {
+  background-color: rgba(240, 245, 249, 0.5);
+  margin-top: 50px;
+  padding: 30px 0 30px 0;
+}
+footer .footer-box {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-box p {
+  padding-left: 20px;
+}
+footer .footer-box .icon-box {
+  display: flex;
+}
+footer .footer-box .icon-box i {
+  font-size: 20px;
+  padding-right: 20px;
 }/*# sourceMappingURL=more.css.map */
