@@ -3,12 +3,9 @@
 // loading
 
 const following = document.getElementById('following');
-// console.log(followingDot);
-// for(let i = 1; i<=6; i++){
   const div = document.createElement('div');
   div.className = 'dot';
   following.appendChild(div);
-// }
 
 window.onload = function() {
   const load = document.getElementById('load');
@@ -108,33 +105,31 @@ function scrollDisplay(el) {
 
 
 //着火点になる要素
-const fadeInLine = document.querySelectorAll(".yellow_circle_line");
+// const fadeInLine = document.querySelectorAll(".yellow_circle_line");
+// console.log(fadeInLine);
  
 //オプションの設定
-const options = {
-    rootMargin: '0px',//着火点になる要素の余白を設定できる
-    threshold: 0, //着火点になる要素がどのくらいの表示割合で、表示されるかの割合を設定できる
-};
+// const options = {
+//     rootMargin: '0px',//着火点になる要素の余白を設定できる
+//     threshold: 0, //着火点になる要素がどのくらいの表示割合で、表示されるかの割合を設定できる
+// };
 
-//intersection observer apiを呼び出す
-const observer = new IntersectionObserver(showElement, options);
+// //intersection observer apiを呼び出す
+// const observer = new IntersectionObserver(showElement, options);
 
-
-
-//.fadeIn_lineクラスに到達したらintersection observer apiを実行する
-fadeInLine.forEach((fadeInLine) => {
-    observer.observe(fadeInLine);
-});
+// //.fadeIn_lineクラスに到達したらintersection observer apiを実行する
+// fadeInLine.forEach((fadeInLine) => {
+//     observer.observe(fadeInLine);
+// });
 
 //要素が表示した後の処理
-function showElement(entries) {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-
-            entry.target.classList.add("active");
-        }
-    });
-}
+// function showElement(entries) {
+//     entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//             entry.target.classList.add("active");
+//         }
+//     });
+// }
 
 
 
