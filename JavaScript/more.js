@@ -23,7 +23,7 @@ navLists.forEach((navList) => {
     ham.classList.toggle('active'); 
     nav.classList.toggle('active'); 
   })
-});
+});z
 
 ham.addEventListener('click', () => {
   ham.classList.toggle('active'); 
