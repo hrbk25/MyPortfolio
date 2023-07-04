@@ -244,7 +244,7 @@ header {
     height: 80px;
   }
 }
-.title-wrapper #main-title {
+.title-wrapper #title {
   display: flex;
   position: absolute;
   left: 50%;
@@ -259,59 +259,59 @@ header {
   color: #C9D6DF;
 }
 @media (max-width: 800px) {
-  .title-wrapper #main-title {
+  .title-wrapper #title {
     font-size: 50px;
     top: 100%;
   }
 }
 @media (max-width: 580px) {
-  .title-wrapper #main-title {
+  .title-wrapper #title {
     font-size: 30px;
     top: 130%;
   }
 }
-.title-wrapper #main-title span {
+.title-wrapper #title span {
   display: block;
   transform: translate(0, 100%);
   transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
 }
-.title-wrapper #main-title span:nth-child(2) {
+.title-wrapper #title span:nth-child(2) {
   transition-delay: 0.07s;
 }
-.title-wrapper #main-title span:nth-child(3) {
+.title-wrapper #title span:nth-child(3) {
   transition-delay: 0.14s;
 }
-.title-wrapper #main-title span:nth-child(4) {
+.title-wrapper #title span:nth-child(4) {
   transition-delay: 0.21s;
 }
-.title-wrapper #main-title span:nth-child(5) {
+.title-wrapper #title span:nth-child(5) {
   transition-delay: 0.28s;
 }
-.title-wrapper #main-title span:nth-child(6) {
+.title-wrapper #title span:nth-child(6) {
   transition-delay: 0.35s;
 }
-.title-wrapper #main-title span:nth-child(7) {
+.title-wrapper #title span:nth-child(7) {
   transition-delay: 0.42s;
 }
-.title-wrapper #main-title span:nth-child(8) {
+.title-wrapper #title span:nth-child(8) {
   transition-delay: 0.49s;
 }
-.title-wrapper #main-title span:nth-child(9) {
+.title-wrapper #title span:nth-child(9) {
   transition-delay: 0.56s;
 }
-.title-wrapper #main-title span:nth-child(10) {
+.title-wrapper #title span:nth-child(10) {
   transition-delay: 0.63s;
 }
-.title-wrapper #main-title span:nth-child(11) {
+.title-wrapper #title span:nth-child(11) {
   transition-delay: 0.7s;
 }
-.title-wrapper #main-title span:nth-child(12) {
+.title-wrapper #title span:nth-child(12) {
   transition-delay: 0.77s;
 }
-.title-wrapper #main-title span:nth-child(13) {
+.title-wrapper #title span:nth-child(13) {
   transition-delay: 0.84s;
 }
-.title-wrapper #main-title span:nth-child(14) {
+.title-wrapper #title span:nth-child(14) {
   transition-delay: 0.91s;
 }
 @keyframes shine {
@@ -331,11 +331,11 @@ header {
   }
 }
 
-#main-title.-visible span {
+#title.-visible span {
   transform: translate(0, 0);
 }
 
-#main-title.-delay span {
+#title.-delay span {
   transform: translate(0, 0);
   background: url(../img/color3.jpeg);
   background-clip: text;
@@ -344,7 +344,7 @@ header {
   animation: shine 8s linear infinite;
 }
 @media (max-width: 800px) {
-  #main-title.-delay span {
+  #title.-delay span {
     animation: shine2 8s linear infinite;
   }
 }
