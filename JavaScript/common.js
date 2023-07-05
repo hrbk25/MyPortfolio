@@ -3,10 +3,10 @@
 // loading
 
 export function loading() {
-  const followingDot = document.getElementById('following-dot');
+  const following = document.getElementById('following');
     const div = document.createElement('div');
     div.className = 'dot';
-    followingDot.appendChild(div);
+    following.appendChild(div);
   
   window.onload = function() {
     const loading = document.getElementById('loading');

@@ -1,6 +1,5 @@
 
-
-// header
+// main
 
 export function createTitle(title, mainTitle) { //文字列を１文字ずつ配列に入れて、それをspanに入れて生成。
   const mainTitle1 = title;
@@ -13,6 +12,7 @@ export function createTitle(title, mainTitle) { //文字列を１文字ずつ配
   }
 }
 
+// header
 
 export function setIntervalHedderMotion(title, header, behavior) {
   setInterval(() => {

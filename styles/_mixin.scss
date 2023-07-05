@@ -17,3 +17,9 @@ $sp: 580px;
     @content;
   }
 }
+
+@mixin nav {
+  @media (min-width: ($sp)) {
+    @content;
+  }
+}
