@@ -1,5 +1,7 @@
 @import './header.css';
 @import './common.css';
+@import './footer.css';
+@import './about.css';
 .main-img {
   position: relative;
   z-index: 10;
@@ -85,15 +87,15 @@
 .main-img #title span:nth-child(18) {
   transition-delay: 1.19s;
 }
+.main-img #title.-visible span {
+  transform: translate(0, 0);
+}
 .main-img img {
   opacity: 0;
   z-index: 20;
 }
 .main-img img.-delay {
   animation: fadeIn 5s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
-}
-.main-img #title.-visible span {
-  transform: translate(0, 0);
 }
 
 @keyframes fadeIn {
@@ -104,139 +106,36 @@
     opacity: 0.6;
   }
 }
-#about {
-  overflow: hidden;
-}
-#about .about-me {
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-}
-@media (max-width: 1100px) {
-  #about .about-me {
-    font-size: 20px;
-  }
-}
-@media (max-width: 800px) {
-  #about .about-me {
-    font-size: 16px;
-  }
-}
-@media (max-width: 580px) {
-  #about .about-me {
-    display: block;
-  }
-}
-#about .about-me img {
-  width: 40%;
-}
-@media (max-width: 580px) {
-  #about .about-me img {
-    width: 80%;
-  }
-}
-#about .about-me .text-box {
-  width: 50%;
-  margin: auto 0;
-}
-@media (max-width: 580px) {
-  #about .about-me .text-box {
-    width: 90%;
-    margin: 0 auto;
-  }
-}
-#about .about-me .text-box .text {
-  text-align: left;
-  margin-bottom: 15px;
-}
-@media (max-width: 580px) {
-  #about .about-me .text-box .text {
-    text-align: center;
-  }
-}
-#about .about-me .text-box .text .name {
-  margin-bottom: 15px;
-  display: inline-block;
-}
-#about .about-me .text-box .text .name span {
-  font-size: 24px;
-}
-@media (max-width: 1100px) {
-  #about .about-me .text-box .text .name span {
-    font-size: 16px;
-  }
-}
-@media (max-width: 800px) {
-  #about .about-me .text-box .text .name span {
-    font-size: 12px;
-  }
-}
-#about .about-me .text-box .text p {
-  font-size: 20px;
-  padding: 2px;
-}
-@media (max-width: 1100px) {
-  #about .about-me .text-box .text p {
-    font-size: 14px;
-  }
-}
-@media (max-width: 800px) {
-  #about .about-me .text-box .text p {
-    font-size: 10px;
-  }
-}
-#about .about-me .text-box .more {
+.more {
   width: 100px;
   margin-left: auto;
+  opacity: 0;
+  transition-duration: 1600ms;
+  transition-property: opacity, transform;
 }
-#about .about-me .text-box .more a {
+.more.scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.more a {
   display: inline-block;
   width: 100%;
   text-align: left;
   border-radius: 0;
 }
-#about .about-me .text-box .more a:after {
+.more a:after {
   position: absolute;
   width: 100%;
   height: 2px;
   content: "";
   transition: all 0.3s;
   background: #C9D6DF;
-}
-#about .about-me .text-box .more a:after {
   right: 0;
   bottom: 0;
 }
-#about .about-me .text-box .more a:hover:after {
+.more a:hover:after {
   width: 0;
   opacity: 0.6;
-}
-
-.about-me .text-box .text .name, .about-me .text-box .text p {
-  opacity: 0;
-  transition-duration: 1600ms;
-  transition-property: opacity, transform;
-}
-.about-me .text-box .text .name.scroll-in, .about-me .text-box .text p.scroll-in {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-.about-me .text-box .text .name.scroll-in:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  border-bottom: 2px solid #C9D6DF;
-  animation: border_anim 0.8s linear forwards;
-}
-.about-me .text-box .more {
-  opacity: 0;
-  transition-duration: 1600ms;
-  transition-property: opacity, transform;
-}
-.about-me .text-box .more.scroll-in {
-  opacity: 1;
-  transform: translate(0, 0);
 }
 
 #about .about-contents .swiper-area {
@@ -403,6 +302,10 @@
   transition-duration: 1600ms;
   transition-property: opacity, transform;
 }
+#skills .skills-box .study-box .study p.scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
 #skills .skills-box .study-box .study p.scroll-in:last-child::before {
   animation: fadeInArrow 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   background: #fff;
@@ -413,10 +316,6 @@
   position: absolute;
   right: 0;
   top: 0;
-}
-#skills .skills-box .study-box .study p.scroll-in {
-  opacity: 1;
-  transform: translate(0, 0);
 }
 #skills .skills-box .study-box .after-me {
   width: 30%;
@@ -506,23 +405,4 @@
   100% {
     transform: translateX(100%);
   }
-}
-footer {
-  background-color: rgba(240, 245, 249, 0.5);
-  margin-top: 50px;
-  padding: 30px 0 30px 0;
-}
-footer .footer-box {
-  display: flex;
-  justify-content: space-between;
-}
-footer .footer-box p {
-  padding-left: 20px;
-}
-footer .footer-box .icon-box {
-  display: flex;
-}
-footer .footer-box .icon-box i {
-  font-size: 20px;
-  padding-right: 20px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,93 @@
+@charset "utf-8";
+@import './mixin';
+
+// about 基本設定
+
+#about{
+  overflow: hidden;
+  .about-me{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    @include pc {
+      font-size: 20px;
+    }
+    @include tab {
+      font-size: 16px;
+    }
+    @include sp {
+      display: block;
+    }
+    img{
+      width: 40%;
+      @include sp {
+        width: 80%;
+      }
+    }
+    .text-box{
+      width: 50%;
+      margin: auto 0;
+      @include sp {
+        width: 90%;
+        margin: 0 auto;
+      }
+      .text{
+        text-align: left;
+        margin-bottom: 15px;
+        @include sp {
+          text-align: center;
+        }
+        .name{
+          margin-bottom: 15px;
+          display: inline-block;
+          span{
+            font-size: 24px;
+            @include pc {
+              font-size: 16px;
+            }
+            @include tab {
+              font-size: 12px;
+            }
+          }
+        }
+        p{
+          font-size: 20px;
+          padding: 2px;
+          @include pc {
+            font-size: 14px;
+          }
+          @include tab {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// about スクロール後の挙動設定
+
+.about-me{
+  .text-box{
+    .text{
+      .name, p{
+        opacity: 0;
+        transition-duration: 1600ms;
+        transition-property: opacity, transform;
+      }
+      .name.scroll-in,p.scroll-in{
+        opacity: 1;
+        transform: translate(0,0);
+      }
+      .name.scroll-in:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-bottom: 2px solid #C9D6DF;
+        animation: border_anim 0.8s linear forwards; //border_anim section-title ./common.scssにある
+      }
+    }
+  }
+}

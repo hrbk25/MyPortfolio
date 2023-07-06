@@ -2,12 +2,11 @@
 @import './mixin';
 @import './header.css';
 @import './common.css';
-
+@import './footer.css';
 
 // more-main
 
 .title-wrapper{
-  // background-color: rgb(240, 245, 249, 0.5);
   position: relative;
   height: 300px;
   z-index: 20;
@@ -49,213 +48,61 @@
         }
       }
     }
-    @keyframes shine {
-      from {
-        background-position: center 70%;
-      }
-      to {
-        background-position: center 265%;
+    &.-visible{
+      span{
+        transform: translate(0, 0);
       }
     }
-    @keyframes shine2 {
-      from {
-        background-position: center 50%;
-      }
-      to {
-        background-position: center 200%;
-      }
-    }
-  }
-}
-
-#title.-visible{
-  span{
-    transform: translate(0, 0);
-  }
-}
-
-#title.-delay{
-  span{
-    transform: translate(0, 0);
-    background:url(../img/color3.jpeg);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    animation: shine 8s linear infinite;
-    @include tab {
-      animation: shine2 8s linear infinite;
-    }
-  }
-}
-
-// about textまで
-
-#about{
-  overflow: hidden;
-  .about-me{
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    @include pc {
-      font-size: 20px;
-    }
-    @include tab {
-      font-size: 16px;
-    }
-    @include sp {
-      display: block;
-    }
-    img{
-      width: 40%;
-      @include sp {
-        width: 80%;
-      }
-    }
-    .text-box{
-      width: 50%;
-      margin: auto 0;
-      @include sp {
-        width: 90%;
-        margin: 0 auto;
-      }
-      .text{
-        text-align: left;
-        margin-bottom: 15px;
+    &.-delay{
+      span{
+        transform: translate(0, 0);
+        background:url(../img/color3.jpeg);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        animation: shine_pc 8s linear infinite;
+        @include tab {
+          animation: shine_tab 8s linear infinite;
+        }
         @include sp {
-          text-align: center;
-        }
-        .name{
-          margin-bottom: 15px;
-          display: inline-block;
-          span{
-            font-size: 24px;
-            @include pc {
-              font-size: 16px;
-            }
-            @include tab {
-              font-size: 12px;
-            }
-          }
-        }
-        p{
-          font-size: 20px;
-          padding: 2px;
-          @include pc {
-            font-size: 14px;
-          }
-          @include tab {
-            font-size: 10px;
-          }
+          animation: shine_sp 9s linear infinite;
         }
       }
     }
   }
 }
 
-// about text スクロール後に表示
-.about-me{
-  .text-box{
-    .text{
-      .name, p{
-        opacity: 0;
-        transition-duration: 1600ms;
-        transition-property: opacity, transform;
-      }
-      .name.scroll-in,p.scroll-in{
-        opacity: 1;
-        transform: translate(0,0);
-      }
-      .name.scroll-in:before{
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        border-bottom: 2px solid #C9D6DF;
-        animation: border_anim 0.8s linear forwards; //border_anim section-titleのところに
-      }
-    }
+@keyframes shine_pc {
+  from {
+    background-position: center 70%;
+  }
+  to {
+    background-position: center 265%;
+  }
+}
+@keyframes shine_tab {
+  from {
+    background-position: center 50%;
+  }
+  to {
+    background-position: center 170%;
+  }
+}
+@keyframes shine_sp {
+  from {
+    background-position: center 50%;
+  }
+  to {
+    background-position: center 150%;
   }
 }
 
+
+// about
+
+@import './about.css'; //about 共通設定のみ別ファイルに。
 
 // Career
-
-// .yellow_circle {
-//   // position : relative;
-//   // color: red;
-//   // margin: 0 auto;
-//   // font-size: 30px;
-//   .yellow_circle_line {
-//       content          : " ";
-//       height           : 0px;
-//       width            : 10px;
-//       background-color:red;
-//       position         : absolute;
-//       // top              : 6px;
-//       left             : 50%;
-//       transform        : translateX(-50%);
-//       -webkit-transform: translateX(-50%);
-//       -ms-transform    : translateX(-50%);
-//   }
-// }
-// .yellow_circle_line {
-//     height: 0px;
-// }
- 
-// .yellow_circle_line.active {
-//     height   : 300px;
-//     animation: yellow_circle 2.0s forwards linear;
-// }
- 
-
-
-
-
-
-
-
-@keyframes pulseMotion {
-  0% {
-    transform: translate(-50%, -50%) scale(1, 1);
-    background-color: rgba(240, 245, 249, 0.7)
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(6.5, 6.5);
-    background-color: rgba(240, 245, 249, 0)
-  }
-}
-
-@keyframes pointline1 {
-  0% {
-      height: 0px;
-  }
-
-  100% {
-      height: 200px;
-  }
-}
-@keyframes pointline3 {
-  0% {
-      height: 0px;
-  }
-
-  100% {
-      height: 400px;
-  }
-}
-
-
-@keyframes pointline2 {
-  0% {
-      height: 0px;
-  }
-
-  100% {
-      height: 100px;
-  }
-}
-
-
 
 .career-box{
   display: flex;
@@ -274,11 +121,31 @@
     position: relative;
     width: 20px;
     height: 20px;
-    // margin: 200px 0px;
     background-color: #F0F5F9;
     border-radius: 50%;
     transition: background-color cubic-bezier(0.215, 0.61, 0.355, 1) .4s;
     cursor: pointer;
+    &.scroll-in{
+      background-color: #52616B;
+      &:after {
+        animation: pulseMotion 2.5s linear infinite;
+      }
+    }
+    &:focus {
+      outline: none;
+    }
+    &:after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      transition: opacity linear 0.4s;
+      content: '';
+    }
     .point-line{
       content          : " ";
       height           : 0px;
@@ -290,6 +157,13 @@
       transform        : translateX(-50%);
       -webkit-transform: translateX(-50%);
       -ms-transform    : translateX(-50%);
+      &.scroll-in{
+        height   : 100px;
+        animation: pointline1 1.0s forwards linear;
+        @include tab {
+          animation: pointline3 2.0s forwards linear;
+        }
+      }
     }
   }
   .career-text{
@@ -301,23 +175,6 @@
   }
 }
 
-
-.point-line{
-  height: 0;
-}
-
-.point.scroll-in{
-  background-color: #52616B;
-}
-
-.point-line.scroll-in{
-  height   : 100px;
-  animation: pointline1 1.0s forwards linear;
-  @include tab {
-    animation: pointline3 2.0s forwards linear;
-  }
-}
-
 .career-box:last-child .point-line.scroll-in{
   animation: pointline2 0.5s forwards linear;
   @include tab {
@@ -325,25 +182,41 @@
   }
 }
 
-.point.scroll-in:after {
-  animation: pulseMotion 2.5s linear infinite;
+
+@keyframes pulseMotion {
+  0% {
+    transform: translate(-50%, -50%) scale(1, 1);
+    background-color: rgba(240, 245, 249, 0.7)
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(6.5, 6.5);
+    background-color: rgba(240, 245, 249, 0)
+  }
 }
 
-.point:focus {
-  outline: none;
+@keyframes pointline1 {
+  0% {
+      height: 0px;
+  }
+  100% {
+      height: 200px;
+  }
 }
-
-.point:after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  transition: opacity linear 0.4s;
-  content: '';
+@keyframes pointline3 {
+  0% {
+      height: 0px;
+  }
+  100% {
+      height: 400px;
+  }
+}
+@keyframes pointline2 {
+  0% {
+      height: 0px;
+  }
+  100% {
+      height: 100px;
+  }
 }
 
 
@@ -360,6 +233,9 @@
     transition-property: opacity, transform;
     @include tab {
       display: block;
+    }
+    &.scroll-in{
+      opacity: 1;
     }
     .strength-box{
       width: 30%;
@@ -382,30 +258,5 @@
         }
       }
     }
-  }
-  .strength-area.scroll-in{
-    opacity: 1;
-  }
-}
-
-
-// CONTACT
-footer{
-  background-color: rgb(240, 245, 249, 0.5);
-  margin-top: 50px;
-  padding: 30px 0 30px 0;
-  .footer-box{
-    display: flex;
-    justify-content: space-between;
-    p{
-      padding-left: 20px;
-    }
-    .icon-box{
-      display: flex;
-      i{
-        font-size: 20px;
-        padding-right: 20px;
-      }
-    }
-  }
+  } 
 }

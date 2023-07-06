@@ -1,5 +1,7 @@
 @import './header.css';
 @import './common.css';
+@import './footer.css';
+@import './about.css';
 .title-wrapper {
   position: relative;
   height: 300px;
@@ -85,7 +87,29 @@
 .title-wrapper #title span:nth-child(14) {
   transition-delay: 0.91s;
 }
-@keyframes shine {
+.title-wrapper #title.-visible span {
+  transform: translate(0, 0);
+}
+.title-wrapper #title.-delay span {
+  transform: translate(0, 0);
+  background: url(../img/color3.jpeg);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: shine_pc 8s linear infinite;
+}
+@media (max-width: 800px) {
+  .title-wrapper #title.-delay span {
+    animation: shine_tab 8s linear infinite;
+  }
+}
+@media (max-width: 580px) {
+  .title-wrapper #title.-delay span {
+    animation: shine_sp 9s linear infinite;
+  }
+}
+
+@keyframes shine_pc {
   from {
     background-position: center 70%;
   }
@@ -93,131 +117,108 @@
     background-position: center 265%;
   }
 }
-@keyframes shine2 {
+@keyframes shine_tab {
   from {
     background-position: center 50%;
   }
   to {
-    background-position: center 200%;
+    background-position: center 170%;
   }
 }
-
-#title.-visible span {
-  transform: translate(0, 0);
-}
-
-#title.-delay span {
-  transform: translate(0, 0);
-  background: url(../img/color3.jpeg);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  animation: shine 8s linear infinite;
-}
-@media (max-width: 800px) {
-  #title.-delay span {
-    animation: shine2 8s linear infinite;
+@keyframes shine_sp {
+  from {
+    background-position: center 50%;
+  }
+  to {
+    background-position: center 150%;
   }
 }
-
-#about {
-  overflow: hidden;
-}
-#about .about-me {
-  font-size: 30px;
+.career-box {
   display: flex;
   justify-content: center;
-}
-@media (max-width: 1100px) {
-  #about .about-me {
-    font-size: 20px;
-  }
-}
-@media (max-width: 800px) {
-  #about .about-me {
-    font-size: 16px;
-  }
-}
-@media (max-width: 580px) {
-  #about .about-me {
-    display: block;
-  }
-}
-#about .about-me img {
-  width: 40%;
-}
-@media (max-width: 580px) {
-  #about .about-me img {
-    width: 80%;
-  }
-}
-#about .about-me .text-box {
-  width: 50%;
-  margin: auto 0;
-}
-@media (max-width: 580px) {
-  #about .about-me .text-box {
-    width: 90%;
-    margin: 0 auto;
-  }
-}
-#about .about-me .text-box .text {
+  margin-top: 100px;
+  height: 100px;
   text-align: left;
-  margin-bottom: 15px;
-}
-@media (max-width: 580px) {
-  #about .about-me .text-box .text {
-    text-align: center;
-  }
-}
-#about .about-me .text-box .text .name {
-  margin-bottom: 15px;
-  display: inline-block;
-}
-#about .about-me .text-box .text .name span {
-  font-size: 24px;
-}
-@media (max-width: 1100px) {
-  #about .about-me .text-box .text .name span {
-    font-size: 16px;
-  }
 }
 @media (max-width: 800px) {
-  #about .about-me .text-box .text .name span {
-    font-size: 12px;
+  .career-box {
+    height: 150px;
   }
 }
-#about .about-me .text-box .text p {
-  font-size: 20px;
-  padding: 2px;
+@media (max-width: 580px) {
+  .career-box {
+    height: 200px;
+  }
 }
-@media (max-width: 1100px) {
-  #about .about-me .text-box .text p {
+.career-box .point {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: #F0F5F9;
+  border-radius: 50%;
+  transition: background-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+  cursor: pointer;
+}
+.career-box .point.scroll-in {
+  background-color: #52616B;
+}
+.career-box .point.scroll-in:after {
+  animation: pulseMotion 2.5s linear infinite;
+}
+.career-box .point:focus {
+  outline: none;
+}
+.career-box .point:after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: opacity linear 0.4s;
+  content: "";
+}
+.career-box .point .point-line {
+  content: " ";
+  height: 0px;
+  width: 10px;
+  background-color: #C9D6DF;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+.career-box .point .point-line.scroll-in {
+  height: 100px;
+  animation: pointline1 1s forwards linear;
+}
+@media (max-width: 800px) {
+  .career-box .point .point-line.scroll-in {
+    animation: pointline3 2s forwards linear;
+  }
+}
+.career-box .career-text {
+  margin-left: 60px;
+  width: 50%;
+}
+@media (max-width: 580px) {
+  .career-box .career-text {
     font-size: 14px;
   }
 }
-@media (max-width: 800px) {
-  #about .about-me .text-box .text p {
-    font-size: 10px;
-  }
-}
 
-.about-me .text-box .text .name, .about-me .text-box .text p {
-  opacity: 0;
-  transition-duration: 1600ms;
-  transition-property: opacity, transform;
+.career-box:last-child .point-line.scroll-in {
+  animation: pointline2 0.5s forwards linear;
 }
-.about-me .text-box .text .name.scroll-in, .about-me .text-box .text p.scroll-in {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-.about-me .text-box .text .name.scroll-in:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  border-bottom: 2px solid #C9D6DF;
-  animation: border_anim 0.8s linear forwards;
+@media (max-width: 800px) {
+  .career-box:last-child .point-line.scroll-in {
+    animation: pointline1 2s forwards linear;
+  }
 }
 
 @keyframes pulseMotion {
@@ -254,103 +255,6 @@
     height: 100px;
   }
 }
-.career-box {
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-  height: 100px;
-  text-align: left;
-}
-@media (max-width: 800px) {
-  .career-box {
-    height: 150px;
-  }
-}
-@media (max-width: 580px) {
-  .career-box {
-    height: 200px;
-  }
-}
-.career-box .point {
-  display: block;
-  position: relative;
-  width: 20px;
-  height: 20px;
-  background-color: #F0F5F9;
-  border-radius: 50%;
-  transition: background-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
-  cursor: pointer;
-}
-.career-box .point .point-line {
-  content: " ";
-  height: 0px;
-  width: 10px;
-  background-color: #C9D6DF;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-}
-.career-box .career-text {
-  margin-left: 60px;
-  width: 50%;
-}
-@media (max-width: 580px) {
-  .career-box .career-text {
-    font-size: 14px;
-  }
-}
-
-.point-line {
-  height: 0;
-}
-
-.point.scroll-in {
-  background-color: #52616B;
-}
-
-.point-line.scroll-in {
-  height: 100px;
-  animation: pointline1 1s forwards linear;
-}
-@media (max-width: 800px) {
-  .point-line.scroll-in {
-    animation: pointline3 2s forwards linear;
-  }
-}
-
-.career-box:last-child .point-line.scroll-in {
-  animation: pointline2 0.5s forwards linear;
-}
-@media (max-width: 800px) {
-  .career-box:last-child .point-line.scroll-in {
-    animation: pointline1 2s forwards linear;
-  }
-}
-
-.point.scroll-in:after {
-  animation: pulseMotion 2.5s linear infinite;
-}
-
-.point:focus {
-  outline: none;
-}
-
-.point:after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  transition: opacity linear 0.4s;
-  content: "";
-}
-
 #strength .strength-area {
   margin-top: 100px;
   display: flex;
@@ -364,6 +268,9 @@
   #strength .strength-area {
     display: block;
   }
+}
+#strength .strength-area.scroll-in {
+  opacity: 1;
 }
 #strength .strength-area .strength-box {
   width: 30%;
@@ -391,27 +298,4 @@
   #strength .strength-area .strength-box .strength-text {
     font-size: 14px;
   }
-}
-#strength .strength-area.scroll-in {
-  opacity: 1;
-}
-
-footer {
-  background-color: rgba(240, 245, 249, 0.5);
-  margin-top: 50px;
-  padding: 30px 0 30px 0;
-}
-footer .footer-box {
-  display: flex;
-  justify-content: space-between;
-}
-footer .footer-box p {
-  padding-left: 20px;
-}
-footer .footer-box .icon-box {
-  display: flex;
-}
-footer .footer-box .icon-box i {
-  font-size: 20px;
-  padding-right: 20px;
 }/*# sourceMappingURL=more.css.map */

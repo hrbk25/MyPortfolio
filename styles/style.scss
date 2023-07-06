@@ -2,6 +2,8 @@
 @import './mixin';
 @import './header.css';
 @import './common.css';
+@import './footer.css';
+
 
 // main
 
@@ -39,164 +41,73 @@
         }
       }
     }
+    &.-visible{
+      span{
+        transform: translate(0, 0);
+      }
+    }
   }
   img{
     opacity: 0;
     z-index: 20;
-  }
-  img.-delay{
-    animation: fadeIn 5s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
-  }
-  #title.-visible{
-    span{
-      transform: translate(0, 0);
+    &.-delay{
+      animation: fadeIn 5s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
     }
   }
 }
  
-// img display表示　animation
-
 @keyframes fadeIn {
   0% {
-    // transform: scale(0.1);
     opacity: 0;
   }
   100% {
     opacity: 0.6;
-    // transform: scale(1);
   }
 }
 
-// about textまで
 
-#about{
-  overflow: hidden;
-  .about-me{
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    @include pc {
-      font-size: 20px;
+// about
+
+@import './about.css'; //about 共通設定のみ別ファイルに。
+
+.more{
+  width: 100px;
+  margin-left: auto;
+  opacity: 0;
+  transition-duration: 1600ms;
+  transition-property: opacity, transform;
+  &.scroll-in{
+    opacity: 1;
+    transform: translate(0,0);
+  }
+  a{
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    border-radius: 0;
+    &:after {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      content: '';
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      background: #C9D6DF;
+      right: 0;
+      bottom: 0;
     }
-    @include tab {
-      font-size: 16px;
-    }
-    @include sp {
-      display: block;
-    }
-    img{
-      width: 40%;
-      @include sp {
-        width: 80%;
-      }
-    }
-    .text-box{
-      width: 50%;
-      margin: auto 0;
-      @include sp {
-        width: 90%;
-        margin: 0 auto;
-      }
-      .text{
-        text-align: left;
-        margin-bottom: 15px;
-        @include sp {
-          text-align: center;
-        }
-        .name{
-          margin-bottom: 15px;
-          display: inline-block;
-          span{
-            font-size: 24px;
-            @include pc {
-              font-size: 16px;
-            }
-            @include tab {
-              font-size: 12px;
-            }
-          }
-        }
-        p{
-          font-size: 20px;
-          padding: 2px;
-          @include pc {
-            font-size: 14px;
-          }
-          @include tab {
-            font-size: 10px;
-          }
-        }
-      }
-      .more{
-        width: 100px;
-        margin-left: auto;
-        a{
-          display: inline-block;
-          width: 100%;
-          text-align: left;
-          border-radius: 0;
-        }
-        a:after {
-          position: absolute;
-          width: 100%;
-          height: 2px;
-          content: '';
-          -webkit-transition: all .3s;
-          transition: all .3s;
-          background: #C9D6DF;
-        }  
-        a:after {
-          right: 0;
-          bottom: 0;
-        }
-        a:hover:after {
-          width: 0;
-          opacity: 0.6;
-        }
-      }
+    &:hover:after {
+      width: 0;
+      opacity: 0.6;
     }
   }
 }
 
-// about text スクロール後に表示
-.about-me{
-  .text-box{
-    .text{
-      .name, p{
-        opacity: 0;
-        transition-duration: 1600ms;
-        transition-property: opacity, transform;
-      }
-      .name.scroll-in,p.scroll-in{
-        opacity: 1;
-        transform: translate(0,0);
-      }
-      .name.scroll-in:before{
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        border-bottom: 2px solid #C9D6DF;
-        animation: border_anim 0.8s linear forwards; //border_anim section-titleのところに
-      }
-    }
-    .more{
-      opacity: 0;
-      transition-duration: 1600ms;
-      transition-property: opacity, transform;
-    }
-    .more.scroll-in{
-      opacity: 1;
-      transform: translate(0,0);
-    }
-  }
-}
 
 // about swiper
 
 #about{
   .about-contents{
-    // margin: 50px 0;
     .swiper-area{
       max-width: 1000px;
       margin: 30px auto 0;
@@ -210,7 +121,6 @@
         max-width: 300px;
       }
       .swiper {
-        // max-width: 500px;
         height: 400px;
         overflow: visible;
         position: relative;
@@ -291,8 +201,6 @@
   }
 }
 
-// swiperのanimation
-
 @keyframes emphasis {
   0%, 40%, 60%, 80% {
     transform: scale(1.0);
@@ -305,13 +213,10 @@
 
 // skills
 
-// skills-list
-
 #skills{
   .skills-box{
     .study-box{
       display: flex;
-      // justify-content: center;
       @include sp {
         display: block;
       }
@@ -339,29 +244,28 @@
           @include pc {
             font-size: 20px;
           }
-        }
-        p:last-child{
-          opacity: 0;
-          overflow: hidden;
-          position: relative;
-          transition-duration: 1600ms;
-          transition-property: opacity, transform;
-        }
-        p.scroll-in:last-child::before{
-          animation: fadeInArrow 1s cubic-bezier(.4, 0, .2, 1) forwards;
-          background: #fff;
-          bottom: 0;
-          content: '';
-          left: 0;
-          pointer-events: none;
-          position: absolute;
-          right: 0;
-          top: 0;
-          // z-index: 1;
-        }
-        p.scroll-in{
-          opacity: 1;
-          transform: translate(0,0);
+          &:last-child{
+            opacity: 0;
+            overflow: hidden;
+            position: relative;
+            transition-duration: 1600ms;
+            transition-property: opacity, transform;
+          }
+          &.scroll-in{
+            opacity: 1;
+            transform: translate(0,0);
+            &:last-child::before{
+              animation: fadeInArrow 1s cubic-bezier(.4, 0, .2, 1) forwards;
+              background: #fff;
+              bottom: 0;
+              content: '';
+              left: 0;
+              pointer-events: none;
+              position: absolute;
+              right: 0;
+              top: 0;
+            }
+          }
         }
       }
       .after-me{
@@ -372,13 +276,12 @@
         @include sp {
           width: 80%;
         }
-      }
-      .after-me.scroll-in{
-        opacity: 1;
+        &.scroll-in{
+          opacity: 1;
+        }
       }
     }
     .skills-title{
-      // margin: 50px 0 0 20px;
       font-size: 28px;
       display: inline-block;
       opacity: 0;
@@ -430,7 +333,7 @@
       left: 0;
       bottom: 0;
       border-bottom: 2px solid #C9D6DF;
-      animation: border_anim 0.5s linear forwards;
+      animation: border_anim 0.5s linear forwards; //border_anim section-title ./common.scssにある
     }
   }
 }
@@ -441,24 +344,3 @@
   }
 }
 
-
-// CONTACT
-footer{
-  background-color: rgb(240, 245, 249, 0.5);
-  margin-top: 50px;
-  padding: 30px 0 30px 0;
-  .footer-box{
-    display: flex;
-    justify-content: space-between;
-    p{
-      padding-left: 20px;
-    }
-    .icon-box{
-      display: flex;
-      i{
-        font-size: 20px;
-        padding-right: 20px;
-      }
-    }
-  }
-}

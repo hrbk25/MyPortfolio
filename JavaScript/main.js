@@ -1,6 +1,5 @@
 'use strict';
 
-
 // common
 
 import {loading, ScrollSectionTitle ,scrollDisplay} from './common.js';
@@ -34,7 +33,7 @@ toggleHumMenu();
 
 
 
-// about 
+// aboutとskills
 
 const myName = document.querySelector('.name');
 const aboutP = document.querySelectorAll('p');
