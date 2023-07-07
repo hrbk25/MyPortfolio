@@ -18,31 +18,26 @@ export function loading() {
 // main more
 
 export function scrollDisplay(el) {
+  const scroll = window.pageYOffset || document.documentElement.scrollTop;
+  const windowHeight = window.innerHeight; 
+  window.addEventListener("scroll", () => {
   if(el.length){ // SelectorAllは数値でtrue、Selectorはundefinedでfalse
-    window.addEventListener("scroll", () => {
       for (let i = 0; i < el.length; i++){
         const rect = el[i].getBoundingClientRect().top;
-        const scroll = window.pageYOffset || document.documentElement.scrollTop;
         const offset = rect + scroll;
-        const windowHeight = window.innerHeight; 
         if (scroll > offset - windowHeight + 150) {
           el[i].classList.add('scroll-in');
         }
       }
-    });
   } else {
-    window.addEventListener("scroll", () => {
       const rect = el.getBoundingClientRect().top;
-      const scroll = window.pageYOffset || document.documentElement.scrollTop;
       const offset = rect + scroll;
-      const windowHeight = window.innerHeight; 
       if (scroll > offset - windowHeight + 150) {
         el.classList.add('scroll-in');
       }
+    }
   });
-  }
 }
-
 
 // scroll ナビ　自動化
 

@@ -215,69 +215,34 @@
 
 #skills{
   .skills-box{
-    .study-box{
-      display: flex;
+    margin: 0 auto;
+    .area{
+      overflow: hidden;
+      width: 800px;
+      margin: 0 auto;
+      @include tab {
+        width: 500px;
+      }
       @include sp {
-        display: block;
+        width: 200px;
       }
-      .before-me{
-        width: 30%;
-        @include sp {
-          width: 80%;
-        }
-      }
-      .study{
-        width: 40%;
-        margin: auto 0;
-        text-align: center;
-        @include sp {
-          width: 90%;
-          margin: 0 auto;
-        }
-        p{
-          font-size: 28px;
-          font-weight: bold;
-          padding: 2px;
-          opacity: 0;
-          transition-duration: 1600ms;
-          transition-property: opacity, transform;
-          @include pc {
-            font-size: 20px;
-          }
-          &:last-child{
-            opacity: 0;
-            overflow: hidden;
-            position: relative;
-            transition-duration: 1600ms;
-            transition-property: opacity, transform;
-          }
-          &.scroll-in{
-            opacity: 1;
-            transform: translate(0,0);
-            &:last-child::before{
-              animation: fadeInArrow 1s cubic-bezier(.4, 0, .2, 1) forwards;
-              background: #fff;
-              bottom: 0;
-              content: '';
-              left: 0;
-              pointer-events: none;
-              position: absolute;
-              right: 0;
-              top: 0;
+      .study-box{
+        display: flex;
+        margin: 50px 0 100px;
+        .study{
+          margin: auto 0;
+          text-align: center;
+          .study-text{
+            font-size: 50px;
+            font-weight: bold;
+            padding: 2px;
+            @include tab {
+              font-size: 30px;
+            }
+            @include sp {
+              font-size: 20px;
             }
           }
-        }
-      }
-      .after-me{
-        width: 30%;
-        opacity: 0;
-        transition-duration: 1600ms;
-        transition-property: opacity, transform;
-        @include sp {
-          width: 80%;
-        }
-        &.scroll-in{
-          opacity: 1;
         }
       }
     }
@@ -338,9 +303,14 @@
   }
 }
 
-@keyframes fadeInArrow {
-  100% {
-    transform: translateX(100%);
-  }
+.scroll-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  scroll-behavior: smooth; /* スムーズスクロールを有効化 */
 }
 
+.scroll-content {
+  width: 100%;
+  height: 3000px; /* 適切な高さに設定してください */
+}
