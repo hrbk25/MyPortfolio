@@ -20,7 +20,7 @@
     display: flex;
     position: absolute;
     left: 50%;
-    top: 70%;
+    top: 90%;
     margin: 0;
     font-size: 100px;
     font-weight: bold;
@@ -31,11 +31,11 @@
     color:#C9D6DF;
     @include tab {
       font-size: 50px;
-      top: 100%;
+      top: 120%;
     }
     @include sp {
       font-size: 30px;
-      top: 130%;
+      top: 150%;
     }
     span{
       display: block;

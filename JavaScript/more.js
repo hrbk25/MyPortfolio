@@ -49,6 +49,8 @@ const pointLine = document.querySelectorAll('.point-line');
 
 scrollDisplay(point);
 scrollDisplay(pointLine);
+// setTimeout(scrollDisplay, 2000, point);
+// setTimeout(scrollDisplay, 2000, pointLine);
 
 // strength
 
