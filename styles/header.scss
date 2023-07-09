@@ -35,12 +35,12 @@ header {
       }
     }
     &.-delay {
-      animation: fadeInUp 2s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+      animation: fadeInDown 2s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
     }
   }
 }
 
-@keyframes fadeInUp {
+@keyframes fadeInDown {
   0% {
     transform: translateY(-100%);
     opacity: 0;

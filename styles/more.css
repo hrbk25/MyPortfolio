@@ -270,7 +270,7 @@
   }
 }
 #strength .strength-area.scroll-in {
-  opacity: 1;
+  animation: fadeInUp 2s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
 }
 #strength .strength-area .strength-box {
   width: 30%;
@@ -297,5 +297,16 @@
 @media (max-width: 580px) {
   #strength .strength-area .strength-box .strength-text {
     font-size: 14px;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }/*# sourceMappingURL=more.css.map */
