@@ -35,11 +35,13 @@ toggleHumMenu();
 
 // about
 
+const aboutImg = document.getElementById('about-img');
 const myName = document.querySelector('.name');
 const aboutP = document.querySelectorAll('p');
 const more = document.querySelector('.more');
 
 
+scrollDisplay(aboutImg);
 scrollDisplay(myName);
 scrollDisplay(aboutP);
 scrollDisplay(more);
@@ -79,12 +81,12 @@ let mySwiper = new Swiper ('.swiper', {
 
 // skills
 
-// const afterMe = document.querySelector('.after-me');
+const beforeMe = document.querySelector('.before-me');
 const skillsTitle = document.querySelectorAll('.skills-title');
 const skillsList = document.querySelectorAll('.skills-list');
 
 
-// scrollDisplay(afterMe);
+scrollDisplay(beforeMe);
 scrollDisplay(skillsTitle);
 scrollDisplay(skillsList);
 

@@ -278,6 +278,13 @@
   display: flex;
   margin: 50px 0 100px;
 }
+#skills .skills-box .area .study-box .before-me {
+  opacity: 0;
+}
+#skills .skills-box .area .study-box .before-me.scroll-in {
+  animation: zoomIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1;
+  opacity: 1;
+}
 #skills .skills-box .area .study-box .study {
   margin: auto 0;
   text-align: center;

@@ -21,11 +21,11 @@
     display: block;
   }
 }
-#about .about-me img {
+#about .about-me #about-img {
   width: 40%;
 }
 @media (max-width: 580px) {
-  #about .about-me img {
+  #about .about-me #about-img {
     width: 80%;
   }
 }
@@ -80,6 +80,15 @@
   }
 }
 
+.about-me #about-img {
+  opacity: 0;
+}
+.about-me #about-img.scroll-in {
+  animation: zoomIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+  opacity: 1;
+  transition-duration: 1600ms;
+  transition-property: opacity, transform;
+}
 .about-me .text-box .text .name, .about-me .text-box .text p {
   opacity: 0;
   transition-duration: 1600ms;
@@ -96,4 +105,13 @@
   bottom: 0;
   border-bottom: 2px solid #C9D6DF;
   animation: border_anim 0.8s linear forwards;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=about.css.map */

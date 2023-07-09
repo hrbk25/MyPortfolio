@@ -228,6 +228,15 @@
       .study-box{
         display: flex;
         margin: 50px 0 100px;
+        .before-me{
+          opacity: 0;
+          &.scroll-in{
+            animation: zoomIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 ; //zoomInは、about.scss内にある。
+            opacity: 1;
+            // transition-duration: 1600ms;
+            // transition-property: opacity, transform;
+          }
+        }
         .study{
           margin: auto 0;
           text-align: center;

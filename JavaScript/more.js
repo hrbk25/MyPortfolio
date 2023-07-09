@@ -35,9 +35,11 @@ scrollDisplay(sectionTitle);
 
 // about scroll display
 
+const aboutImg = document.getElementById('about-img');
 const myName = document.querySelector('.name');
 const aboutP = document.querySelectorAll('p');
 
+scrollDisplay(aboutImg);
 scrollDisplay(myName);
 scrollDisplay(aboutP);
 
