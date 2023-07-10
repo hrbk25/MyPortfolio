@@ -169,8 +169,15 @@
   .career-text{
     margin-left: 60px;
     width: 50%;
+    opacity: 0;
     @include sp {
       font-size: 14px;
+    }
+    &.scroll-in{
+      opacity: 1;
+      transition-duration: 1600ms;
+      transition-property: opacity, transform;    
+      animation: fadeInUp 2s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards; 
     }
   }
 }
@@ -218,7 +225,6 @@
       height: 100px;
   }
 }
-
 
 // strength
 

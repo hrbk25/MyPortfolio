@@ -48,11 +48,11 @@ scrollDisplay(aboutP);
 
 const point = document.querySelectorAll('.point');
 const pointLine = document.querySelectorAll('.point-line');
+const careerText = document.querySelectorAll('.career-text');
 
 scrollDisplay(point);
 scrollDisplay(pointLine);
-// setTimeout(scrollDisplay, 2000, point);
-// setTimeout(scrollDisplay, 2000, pointLine);
+scrollDisplay(careerText);
 
 // strength
 

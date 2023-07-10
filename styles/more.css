@@ -205,11 +205,18 @@
 .career-box .career-text {
   margin-left: 60px;
   width: 50%;
+  opacity: 0;
 }
 @media (max-width: 580px) {
   .career-box .career-text {
     font-size: 14px;
   }
+}
+.career-box .career-text.scroll-in {
+  opacity: 1;
+  transition-duration: 1600ms;
+  transition-property: opacity, transform;
+  animation: fadeInUp 2s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
 }
 
 .career-box:last-child .point-line.scroll-in {
