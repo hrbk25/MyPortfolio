@@ -1,3 +1,6 @@
+@charset "utf-8";
+@import './mixin';
+
 footer{
   background-color: rgb(240, 245, 249, 0.5);
   margin-top: 50px;
@@ -13,6 +16,9 @@ footer{
       i{
         font-size: 20px;
         padding-right: 20px;
+        @include sp {
+          font-size: 16px;
+        }
       }
     }
   }

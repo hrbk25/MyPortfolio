@@ -33,7 +33,7 @@
       }
       .text{
         text-align: left;
-        margin-bottom: 15px;
+        margin: 0 auto 15px;
         @include sp {
           text-align: center;
         }
@@ -57,7 +57,13 @@
             font-size: 14px;
           }
           @include tab {
-            font-size: 10px;
+            font-size: 12px;
+          }
+          @include sp {
+            text-align: justify;
+          }
+          span{
+            display: inline-block;
           }
         }
       }

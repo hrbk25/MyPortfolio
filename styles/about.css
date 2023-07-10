@@ -41,7 +41,7 @@
 }
 #about .about-me .text-box .text {
   text-align: left;
-  margin-bottom: 15px;
+  margin: 0 auto 15px;
 }
 @media (max-width: 580px) {
   #about .about-me .text-box .text {
@@ -76,8 +76,16 @@
 }
 @media (max-width: 800px) {
   #about .about-me .text-box .text p {
-    font-size: 10px;
+    font-size: 12px;
   }
+}
+@media (max-width: 580px) {
+  #about .about-me .text-box .text p {
+    text-align: justify;
+  }
+}
+#about .about-me .text-box .text p span {
+  display: inline-block;
 }
 
 .about-me #about-img {

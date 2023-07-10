@@ -25,14 +25,14 @@ export function scrollDisplay(el) {
       for (let i = 0; i < el.length; i++){
         const rect = el[i].getBoundingClientRect().top;
         const offset = rect + scroll;
-        if (scroll > offset - windowHeight + 300) {
+        if (scroll > offset - windowHeight + 200) {
           el[i].classList.add('scroll-in');
         }
       }
   } else {
       const rect = el.getBoundingClientRect().top;
       const offset = rect + scroll;
-      if (scroll > offset - windowHeight + 300) {
+      if (scroll > offset - windowHeight + 200) {
         el.classList.add('scroll-in');
       }
     }

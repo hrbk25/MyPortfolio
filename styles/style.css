@@ -331,6 +331,7 @@
   #skills .skills-box .skills-list {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 50px;
   }
 }
 #skills .skills-box .skills-list li {
