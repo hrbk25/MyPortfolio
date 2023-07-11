@@ -85,33 +85,30 @@ const beforeMe = document.querySelector('.before-me');
 const skillsTitle = document.querySelectorAll('.skills-title');
 const skillsList = document.querySelectorAll('.skills-list');
 
-
 scrollDisplay(beforeMe);
 scrollDisplay(skillsTitle);
 scrollDisplay(skillsList);
 
-window.addEventListener("load", function(){
 
-  //プラグインを定義
-  gsap.registerPlugin(ScrollTrigger);
-  
+window.addEventListener("load", function(){
+  gsap.registerPlugin(ScrollTrigger); //プラグインを定義
+  console.log(gsap);
   const area  = document.querySelector(".area");
-  const wrap  = document.querySelector(".study-box");
+  const box  = document.querySelector(".study-box");
   const items = document.querySelectorAll(".item");
   const num   = items.length;
   
-  gsap.set(wrap,  { width: num * 100 + "%" });//横幅を指定
+  gsap.set(box,  { width: num * 100 + "%" });//横幅を指定
   gsap.set(items, { width: 100 / num + "%" });//横幅を指定
-  
   gsap.to(items, {
     xPercent: -100 * ( num - 1 ), //x方向に移動させる
     ease: "none",
     scrollTrigger: {
-      trigger: area, //トリガー
-      start: "top top", //開始位置
-      end: "+=1000", //終了位置 スクロール量の幅調整
-      pin: true, //ピン留め
-      scrub: true, //スクロール量に応じて動かす
+      trigger: area,
+      start: "top top",
+      end: "+=1000", 
+      pin: true,
+      scrub: true, 
     }
   });
   });
