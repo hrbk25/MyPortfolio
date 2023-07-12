@@ -19,13 +19,19 @@ import {createTitle, setIntervalHedderMotion, toggleHumMenu} from './header.js'
 
 // →page-header main-img
 
-const title = document.getElementById('title');
-createTitle(`Hiro's Portofolio`, title);
+const titleTop = document.getElementById('title-top');
+const titleBottom = document.getElementById('title-bottom');
+
+createTitle(`Hiro's`, titleTop, 300);
+createTitle(`Portofolio`, titleBottom, 900);
+
+setInterval(() => {
+  titleBottom.classList.add('-visible');
+}, 900);
 
 const pageHeader = document.getElementById('page-header');
 const homeImg = document.getElementById('home-img');
-
-setIntervalHedderMotion(title, pageHeader, homeImg);
+setIntervalHedderMotion(pageHeader, homeImg);
 
 // →hamburger
 
@@ -92,7 +98,6 @@ scrollDisplay(skillsList);
 
 window.addEventListener("load", function(){
   gsap.registerPlugin(ScrollTrigger); //プラグインを定義
-  console.log(gsap);
   const area  = document.querySelector(".area");
   const box  = document.querySelector(".study-box");
   const items = document.querySelectorAll(".item");

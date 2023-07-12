@@ -2,22 +2,22 @@
 @import './common.css';
 @import './footer.css';
 @import './about.css';
-.title-wrapper {
+.title-box {
   position: relative;
   height: 300px;
   z-index: 20;
 }
 @media (max-width: 800px) {
-  .title-wrapper {
+  .title-box {
     height: 150px;
   }
 }
 @media (max-width: 580px) {
-  .title-wrapper {
+  .title-box {
     height: 60px;
   }
 }
-.title-wrapper #title {
+.title-box #title {
   display: flex;
   position: absolute;
   left: 50%;
@@ -32,65 +32,65 @@
   color: #C9D6DF;
 }
 @media (max-width: 800px) {
-  .title-wrapper #title {
-    font-size: 50px;
+  .title-box #title {
+    font-size: 65px;
     top: 120%;
   }
 }
 @media (max-width: 580px) {
-  .title-wrapper #title {
-    font-size: 30px;
+  .title-box #title {
+    font-size: 20px;
     top: 150%;
   }
 }
-.title-wrapper #title span {
+.title-box #title span {
   display: block;
   transform: translate(0, 100%);
   transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
 }
-.title-wrapper #title span:nth-child(2) {
+.title-box #title span:nth-child(2) {
   transition-delay: 0.07s;
 }
-.title-wrapper #title span:nth-child(3) {
+.title-box #title span:nth-child(3) {
   transition-delay: 0.14s;
 }
-.title-wrapper #title span:nth-child(4) {
+.title-box #title span:nth-child(4) {
   transition-delay: 0.21s;
 }
-.title-wrapper #title span:nth-child(5) {
+.title-box #title span:nth-child(5) {
   transition-delay: 0.28s;
 }
-.title-wrapper #title span:nth-child(6) {
+.title-box #title span:nth-child(6) {
   transition-delay: 0.35s;
 }
-.title-wrapper #title span:nth-child(7) {
+.title-box #title span:nth-child(7) {
   transition-delay: 0.42s;
 }
-.title-wrapper #title span:nth-child(8) {
+.title-box #title span:nth-child(8) {
   transition-delay: 0.49s;
 }
-.title-wrapper #title span:nth-child(9) {
+.title-box #title span:nth-child(9) {
   transition-delay: 0.56s;
 }
-.title-wrapper #title span:nth-child(10) {
+.title-box #title span:nth-child(10) {
   transition-delay: 0.63s;
 }
-.title-wrapper #title span:nth-child(11) {
+.title-box #title span:nth-child(11) {
   transition-delay: 0.7s;
 }
-.title-wrapper #title span:nth-child(12) {
+.title-box #title span:nth-child(12) {
   transition-delay: 0.77s;
 }
-.title-wrapper #title span:nth-child(13) {
+.title-box #title span:nth-child(13) {
   transition-delay: 0.84s;
 }
-.title-wrapper #title span:nth-child(14) {
+.title-box #title span:nth-child(14) {
   transition-delay: 0.91s;
 }
-.title-wrapper #title.-visible span {
+.title-box #title.-visible span {
   transform: translate(0, 0);
 }
-.title-wrapper #title.-delay span {
+.title-box #title.-delay span {
   transform: translate(0, 0);
   background: url(../img/color3.jpeg);
   background-clip: text;
@@ -99,12 +99,12 @@
   animation: shine_pc 8s linear infinite;
 }
 @media (max-width: 800px) {
-  .title-wrapper #title.-delay span {
+  .title-box #title.-delay span {
     animation: shine_tab 8s linear infinite;
   }
 }
 @media (max-width: 580px) {
-  .title-wrapper #title.-delay span {
+  .title-box #title.-delay span {
     animation: shine_sp 9s linear infinite;
   }
 }
@@ -210,7 +210,7 @@
 }
 @media (max-width: 580px) {
   .career-box .career-text {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .career-box .career-text.scroll-in {
@@ -294,7 +294,7 @@
 }
 @media (max-width: 580px) {
   #strength .strength-area .strength-box .strength-title {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 #strength .strength-area .strength-box .strength-text {
@@ -304,7 +304,7 @@
 }
 @media (max-width: 580px) {
   #strength .strength-area .strength-box .strength-text {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 

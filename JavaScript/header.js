@@ -1,7 +1,7 @@
 
 // main
 
-export function createTitle(title, mainTitle) { //文字列を１文字ずつ配列に入れて、それをspanに入れて生成。
+export function createTitle(title, mainTitle, sec_ms) { //文字列を１文字ずつ配列に入れて、それをspanに入れて生成。
   const mainTitle1 = title;
   let arrayTitle = mainTitle1.split('');
     
@@ -10,15 +10,16 @@ export function createTitle(title, mainTitle) { //文字列を１文字ずつ配
     span.textContent = arrayTitle[i];
     mainTitle.appendChild(span);
   }
+
+  setInterval(() => {
+    mainTitle.classList.add('-visible');
+  }, sec_ms);
+
 }
 
 // header
 
-export function setIntervalHedderMotion(title, header, behavior) {
-  setInterval(() => {
-    title.classList.add('-visible');
-  }, 300);
-  
+export function setIntervalHedderMotion(header, behavior) {  
   setInterval(() => {
     header.classList.add('-delay');
     behavior.classList.add('-delay');

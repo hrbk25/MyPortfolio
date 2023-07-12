@@ -9,7 +9,13 @@
 .main-img{
   position: relative;
   z-index: 10;
-  #title{
+  #title-top{
+    top: 40%;
+  }
+  #title-bottom{
+    top: 55%;
+  }
+  #title-top, #title-bottom{
     display: flex;
     overflow: hidden;
     font-size: 100px;
@@ -17,23 +23,23 @@
     text-align: center;
     padding: 5px;
     left: 50%;
-    top: 50%;
+    // top: 50%;
     transform: translate(-50%, -50%);
     color: #52616B;
     font-weight: bold;
     letter-spacing: 6px;
     z-index: 30;
     @include pc {
-      font-size: 50px;
+      font-size: 65px;
     }
     @include sp {
-      font-size: 20px;
+      font-size:22px;
     }
     span{
       display: block;
       transform: translate(0, 105%);
       transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
-      @for $i from 1 through 17 {
+      @for $i from 1 through 10 {
         &:nth-child(#{$i + 1}) {
           $delay: $i * 0.07 + s;
           transition-delay: $delay;
@@ -75,6 +81,9 @@
   opacity: 0;
   transition-duration: 1600ms;
   transition-property: opacity, transform;
+  @include sp {
+    font-size: 14px;
+  }
   &.scroll-in{
     opacity: 1;
     transform: translate(0,0);
@@ -144,7 +153,7 @@
               }
               @include sp {
                 bottom: -80%;
-                font-size: 16px;
+                font-size: 14px;
               }
             }
           }
@@ -248,7 +257,7 @@
               font-size: 30px;
             }
             @include sp {
-              font-size: 20px;
+              font-size: 16px;
             }
           }
         }
@@ -310,16 +319,4 @@
       animation: border_anim 0.5s linear forwards; //border_anim section-title ./common.scssにある
     }
   }
-}
-
-.scroll-container {
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-  scroll-behavior: smooth; /* スムーズスクロールを有効化 */
-}
-
-.scroll-content {
-  width: 100%;
-  height: 3000px; /* 適切な高さに設定してください */
 }

@@ -6,7 +6,7 @@
 
 // more-main
 
-.title-wrapper{
+.title-box{
   position: relative;
   height: 300px;
   z-index: 20;
@@ -30,11 +30,11 @@
     letter-spacing: 6px;
     color:#C9D6DF;
     @include tab {
-      font-size: 50px;
+      font-size: 65px;
       top: 120%;
     }
     @include sp {
-      font-size: 30px;
+      font-size: 20px;
       top: 150%;
     }
     span{
@@ -172,7 +172,7 @@
     opacity: 0;
     text-align: justify;
     @include sp {
-      font-size: 14px;
+      font-size: 12px;
     }
     &.scroll-in{
       opacity: 1;
@@ -253,7 +253,7 @@
       .strength-title{
         font-size: 18px;
         @include sp {
-          font-size: 16px;
+          font-size: 14px;
         }
       }
       .strength-text{
@@ -261,7 +261,7 @@
         margin-top: 20px;
         text-align: justify;
         @include sp {
-          font-size: 14px;
+          font-size: 12px;
         }
       }
     }

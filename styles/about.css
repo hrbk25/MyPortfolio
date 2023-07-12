@@ -52,6 +52,11 @@
   margin-bottom: 15px;
   display: inline-block;
 }
+@media (max-width: 800px) {
+  #about .about-me .text-box .text .name {
+    font-size: 14px;
+  }
+}
 #about .about-me .text-box .text .name span {
   font-size: 24px;
 }
