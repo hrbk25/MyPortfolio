@@ -13,8 +13,6 @@ header {
     background-color: rgba(240, 245, 249, 0.5);
     font-size: 16px;
     transform: translateX(100%);
-    transition: ease 0.4s; /* ハンバーガーメニュークリック時のナビゲーションメニュー出現を遅延 */
-    
     @include sp {
       padding: 10px;
       background-color: transparent;
@@ -23,11 +21,9 @@ header {
     ul {
       display: flex;
       justify-content: space-around;
-      
       @include sp {
         display: inline-block;
       }
-      
       li {
         @include sp {
           margin-top: 10px;
@@ -83,7 +79,7 @@ header {
   }
 }
 
-
+// hamaburger menu
 .hamburger-box{
   @include sp {
     width: 40px;

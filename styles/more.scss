@@ -5,7 +5,6 @@
 @import './footer.css';
 
 // more-main
-
 .title-box{
   position: relative;
   height: 300px;
@@ -16,42 +15,16 @@
   @include sp {
     height: 60px;
   }
+  // ./common.cssに共通設定あり↓
   #title{
-    display: flex;
-    position: absolute;
-    left: 50%;
     top: 90%;
     margin: 0;
-    font-size: 100px;
-    font-weight: bold;
-    text-align: center;
-    overflow: hidden;
-    transform: translate(-50%, -50%);
-    letter-spacing: 6px;
     color:#C9D6DF;
     @include tab {
-      font-size: 65px;
       top: 120%;
     }
     @include sp {
-      font-size: 20px;
       top: 150%;
-    }
-    span{
-      display: block;
-      transform: translate(0, 100%);
-      transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
-      @for $i from 1 through 13 {
-        &:nth-child(#{$i + 1}) {
-          $delay: $i * 0.07 + s;
-          transition-delay: $delay;
-        }
-      }
-    }
-    &.-visible{
-      span{
-        transform: translate(0, 0);
-      }
     }
     &.-delay{
       span{
@@ -60,19 +33,19 @@
         background-clip: text;
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
-        animation: shine_pc 8s linear infinite;
+        animation: move-color_pc 8s linear infinite;
         @include tab {
-          animation: shine_tab 8s linear infinite;
+          animation: move-color_tab 8s linear infinite;
         }
         @include sp {
-          animation: shine_sp 9s linear infinite;
+          animation: move-color_sp 9s linear infinite;
         }
       }
     }
   }
 }
 
-@keyframes shine_pc {
+@keyframes move-color_pc {
   from {
     background-position: center 70%;
   }
@@ -80,7 +53,7 @@
     background-position: center 265%;
   }
 }
-@keyframes shine_tab {
+@keyframes move-color_tab {
   from {
     background-position: center 50%;
   }
@@ -88,7 +61,7 @@
     background-position: center 170%;
   }
 }
-@keyframes shine_sp {
+@keyframes move-color_sp {
   from {
     background-position: center 50%;
   }
@@ -99,11 +72,9 @@
 
 
 // about
-
 @import './about.css'; //about 共通設定のみ別ファイルに。
 
 // Career
-
 .career-box{
   display: flex;
   justify-content: center;
@@ -182,14 +153,12 @@
     }
   }
 }
-
 .career-box:last-child .point-line.scroll-in{
   animation: pointline2 0.5s forwards linear;
   @include tab {
     animation: pointline1 2.0s forwards linear;
   }
 }
-
 
 @keyframes pulseMotion {
   0% {
@@ -228,7 +197,6 @@
 }
 
 // strength
-
 #strength{
   .strength-area{
     margin-top: 100px;

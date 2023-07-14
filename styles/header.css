@@ -11,7 +11,6 @@ header #page-header {
   background-color: rgba(240, 245, 249, 0.5);
   font-size: 16px;
   transform: translateX(100%);
-  transition: ease 0.4s; /* ハンバーガーメニュークリック時のナビゲーションメニュー出現を遅延 */
 }
 @media (max-width: 580px) {
   header #page-header {

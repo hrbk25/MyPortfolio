@@ -1,7 +1,5 @@
-
-
 // loading
-
+// 読み込み中に球体が回転する挙動。
 export function loading() {
   const following = document.getElementById('following');
     const div = document.createElement('div');
@@ -15,8 +13,11 @@ export function loading() {
 }
 
 
-// main more
+// section title
+export const sectionTitle = document.querySelectorAll('.section-title');
 
+
+// main more
 export function scrollDisplay(el) {
   const scroll = window.pageYOffset || document.documentElement.scrollTop;
   const windowHeight = window.innerHeight; 
@@ -39,8 +40,8 @@ export function scrollDisplay(el) {
   });
 }
 
-// scroll ナビ　自動化
 
+// scroll ナビ 自動化
 const pageHeader = document.getElementById('page-header');
 const headerHeight = pageHeader.clientHeight; // headerがsection-titleと被らないように。
 const scorollLinks = document.querySelectorAll('a[href^="#"]');

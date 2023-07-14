@@ -5,10 +5,10 @@
 @import './footer.css';
 
 // main
-
 .main-img{
   position: relative;
   z-index: 10;
+  // ./common.cssに共通設定あり↓
   #title-top{
     top: 40%;
   }
@@ -16,41 +16,7 @@
     top: 55%;
   }
   #title-top, #title-bottom{
-    display: flex;
-    overflow: hidden;
-    font-size: 100px;
-    position: absolute;
-    text-align: center;
-    padding: 5px;
-    left: 50%;
-    // top: 50%;
-    transform: translate(-50%, -50%);
     color: #52616B;
-    font-weight: bold;
-    letter-spacing: 6px;
-    z-index: 30;
-    @include pc {
-      font-size: 65px;
-    }
-    @include sp {
-      font-size:22px;
-    }
-    span{
-      display: block;
-      transform: translate(0, 105%);
-      transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
-      @for $i from 1 through 10 {
-        &:nth-child(#{$i + 1}) {
-          $delay: $i * 0.07 + s;
-          transition-delay: $delay;
-        }
-      }
-    }
-    &.-visible{
-      span{
-        transform: translate(0, 0);
-      }
-    }
   }
   img{
     opacity: 0;
@@ -72,7 +38,6 @@
 
 
 // about
-
 @import './about.css'; //about 共通設定のみ別ファイルに。
 
 .more{
@@ -113,7 +78,6 @@
 
 
 // about swiper
-
 #about{
   .about-contents{
     .swiper-area{
@@ -220,7 +184,6 @@
 
 
 // skills
-
 #skills{
   .skills-box{
     margin: 0 auto;
@@ -242,8 +205,6 @@
           &.scroll-in{
             animation: zoomIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 ; //zoomInは、about.scss内にある。
             opacity: 1;
-            // transition-duration: 1600ms;
-            // transition-property: opacity, transform;
           }
         }
         .study{

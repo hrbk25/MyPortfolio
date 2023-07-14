@@ -99,8 +99,6 @@
 .about-me #about-img.scroll-in {
   animation: zoomIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
   opacity: 1;
-  transition-duration: 1600ms;
-  transition-property: opacity, transform;
 }
 .about-me .text-box .text .name, .about-me .text-box .text p {
   opacity: 0;

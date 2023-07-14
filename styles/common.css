@@ -109,6 +109,96 @@ html body .container {
     transform: scale(1);
   }
 }
+#title,
+#title-top, #title-bottom {
+  display: flex;
+  overflow: hidden;
+  font-size: 100px;
+  position: absolute;
+  text-align: center;
+  padding: 5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #52616B;
+  font-weight: bold;
+  letter-spacing: 6px;
+  z-index: 30;
+}
+@media (max-width: 1100px) {
+  #title,
+  #title-top, #title-bottom {
+    font-size: 65px;
+  }
+}
+@media (max-width: 580px) {
+  #title,
+  #title-top, #title-bottom {
+    font-size: 20px;
+  }
+}
+#title span,
+#title-top span, #title-bottom span {
+  display: block;
+  transform: translate(0, 105%);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+#title span:nth-child(2),
+#title-top span:nth-child(2), #title-bottom span:nth-child(2) {
+  transition-delay: 0.07s;
+}
+#title span:nth-child(3),
+#title-top span:nth-child(3), #title-bottom span:nth-child(3) {
+  transition-delay: 0.14s;
+}
+#title span:nth-child(4),
+#title-top span:nth-child(4), #title-bottom span:nth-child(4) {
+  transition-delay: 0.21s;
+}
+#title span:nth-child(5),
+#title-top span:nth-child(5), #title-bottom span:nth-child(5) {
+  transition-delay: 0.28s;
+}
+#title span:nth-child(6),
+#title-top span:nth-child(6), #title-bottom span:nth-child(6) {
+  transition-delay: 0.35s;
+}
+#title span:nth-child(7),
+#title-top span:nth-child(7), #title-bottom span:nth-child(7) {
+  transition-delay: 0.42s;
+}
+#title span:nth-child(8),
+#title-top span:nth-child(8), #title-bottom span:nth-child(8) {
+  transition-delay: 0.49s;
+}
+#title span:nth-child(9),
+#title-top span:nth-child(9), #title-bottom span:nth-child(9) {
+  transition-delay: 0.56s;
+}
+#title span:nth-child(10),
+#title-top span:nth-child(10), #title-bottom span:nth-child(10) {
+  transition-delay: 0.63s;
+}
+#title span:nth-child(11),
+#title-top span:nth-child(11), #title-bottom span:nth-child(11) {
+  transition-delay: 0.7s;
+}
+#title span:nth-child(12),
+#title-top span:nth-child(12), #title-bottom span:nth-child(12) {
+  transition-delay: 0.77s;
+}
+#title span:nth-child(13),
+#title-top span:nth-child(13), #title-bottom span:nth-child(13) {
+  transition-delay: 0.84s;
+}
+#title span:nth-child(14),
+#title-top span:nth-child(14), #title-bottom span:nth-child(14) {
+  transition-delay: 0.91s;
+}
+#title.-visible span,
+#title-top.-visible span, #title-bottom.-visible span {
+  transform: translate(0, 0);
+}
+
 .section-title {
   font-size: 40px;
   font-weight: bold;

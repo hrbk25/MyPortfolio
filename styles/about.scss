@@ -2,7 +2,6 @@
 @import './mixin';
 
 // about 基本設定
-
 #about{
   overflow: hidden;
   .about-me{
@@ -76,15 +75,12 @@
 
 
 // about スクロール後の挙動設定
-
 .about-me{
   #about-img{
     opacity: 0;
     &.scroll-in{
     animation: zoomIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
     opacity: 1;
-    transition-duration: 1600ms;
-    transition-property: opacity, transform;
    } 
   }
   .text-box{
