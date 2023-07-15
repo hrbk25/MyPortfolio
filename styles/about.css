@@ -3,6 +3,7 @@
 }
 #about .about-me {
   font-size: 30px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
 }
@@ -22,7 +23,12 @@
   }
 }
 #about .about-me #about-img {
-  width: 40%;
+  width: 30%;
+}
+@media (max-width: 800px) {
+  #about .about-me #about-img {
+    width: 35%;
+  }
 }
 @media (max-width: 580px) {
   #about .about-me #about-img {
@@ -30,12 +36,16 @@
   }
 }
 #about .about-me .text-box {
-  width: 50%;
+  width: 55%;
   margin: auto 0;
+}
+@media (max-width: 800px) {
+  #about .about-me .text-box {
+    width: 85%;
+  }
 }
 @media (max-width: 580px) {
   #about .about-me .text-box {
-    width: 90%;
     margin: 0 auto;
   }
 }
