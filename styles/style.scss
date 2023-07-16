@@ -188,11 +188,12 @@
 #skills{
   .skills-box{
     margin: 0 auto;
+    width: 100%;
     .area{
       overflow: hidden;
       width: 800px;
       margin: 0 auto;
-      @include tab {
+      @include pc {
         width: 500px;
       }
       @include sp {
@@ -215,7 +216,7 @@
             font-size: 50px;
             font-weight: bold;
             padding: 2px;
-            @include tab {
+            @include pc {
               font-size: 30px;
             }
             @include sp {
@@ -245,16 +246,23 @@
       overflow: hidden;
       transition-duration: 1600ms;
       transition-property: opacity, transform;
-      @include sp {
+      @include pc {
         flex-wrap: wrap;
+        padding: 0 50px;
+      }
+      @include sp {
+        padding: 0;
         justify-content: center;
-        gap: 50px;
+        gap: 70px;
       }
       li{
         width: 12%;
         transform: translate(0, 130%);
         transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
         @include pc {
+          width: 25%;
+        }
+        @include tab {
           width: 25%;
         }
       }
