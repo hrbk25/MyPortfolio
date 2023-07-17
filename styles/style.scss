@@ -47,6 +47,13 @@
   opacity: 0;
   transition-duration: 1600ms;
   transition-property: opacity, transform;
+  font-size: 30px;
+  @include pc {
+    font-size: 20px;
+  }
+  @include tab {
+    font-size: 18px;
+  }
   @include sp {
     font-size: 14px;
   }
